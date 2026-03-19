@@ -43,14 +43,10 @@ button{cursor:none}
 
 /* ===================== ANIMATED BG BLOBS ===================== */
 .bg-blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.blob{position:absolute;border-radius:50%;filter:blur(80px);animation:blobFloat 18s ease-in-out infinite alternate}
-.blob-1{width:600px;height:600px;background:rgba(245,166,35,0.06);top:-200px;left:-200px;animation-duration:20s}
-.blob-2{width:500px;height:500px;background:rgba(79,158,255,0.05);top:30%;right:-150px;animation-duration:25s;animation-delay:-8s}
-.blob-3{width:400px;height:400px;background:rgba(245,166,35,0.04);bottom:-100px;left:30%;animation-duration:22s;animation-delay:-4s}
-@keyframes blobFloat{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,30px) scale(1.15)}}
-
-/* Grid overlay */
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:70px 70px;pointer-events:none;z-index:0}
+.blob{position:absolute;border-radius:50%;will-change:transform;animation:blobFloat 20s ease-in-out infinite alternate}
+.blob-1{width:500px;height:500px;background:radial-gradient(circle,rgba(245,166,35,0.09),transparent 70%);top:-150px;left:-150px}
+.blob-2{width:450px;height:450px;background:radial-gradient(circle,rgba(79,158,255,0.06),transparent 70%);bottom:-100px;right:-100px;animation-delay:-10s}
+@keyframes blobFloat{0%{transform:translate(0,0)}100%{transform:translate(30px,20px)}}
 
 /* ===================== CUSTOM CURSOR ===================== */
 #cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.3s,height 0.3s,opacity 0.3s;mix-blend-mode:normal;box-shadow:0 0 20px var(--glow),0 0 40px var(--glow)}
@@ -63,8 +59,8 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 section{padding:110px 0;position:relative;z-index:1}
 
 /* ===================== GLASSMORPHISM ===================== */
-.glass{background:var(--surface);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--border);border-radius:var(--radius)}
-.glass-strong{background:rgba(255,255,255,0.06);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius)}
+.glass{background:rgba(20,20,20,0.85);border:1px solid var(--border);border-radius:var(--radius)}
+.glass-strong{background:rgba(28,28,28,0.92);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius)}
 
 /* ===================== TYPOGRAPHY ===================== */
 .label{font-size:12px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:8px;margin-bottom:12px}
@@ -127,11 +123,9 @@ h1{font-size:clamp(40px,5.5vw,68px);font-weight:900;line-height:1.02;letter-spac
 
 /* 3D Photo Frame */
 .hero-photo-scene{perspective:1000px;width:100%}
-.hero-photo-3d{position:relative;transform-style:preserve-3d;transition:transform 0.1s;border-radius:24px}
-.photo-frame{position:relative;border-radius:24px;overflow:visible}
-.photo-frame::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(135deg,var(--accent) 0%,transparent 50%,var(--accent2) 100%);z-index:0;animation:borderRotate 4s linear infinite}
-@keyframes borderRotate{0%{background:linear-gradient(0deg,var(--accent),transparent,var(--accent2))}100%{background:linear-gradient(360deg,var(--accent),transparent,var(--accent2))}}
-.photo-img{width:100%;height:480px;object-fit:cover;object-position:top center;border-radius:22px;position:relative;z-index:1;display:block}
+.hero-photo-3d{position:relative;transform-style:preserve-3d;transition:transform 0.15s ease-out;border-radius:24px;will-change:transform}
+.photo-frame{position:relative;border-radius:24px;padding:3px;background:linear-gradient(135deg,var(--accent),rgba(79,158,255,0.6) 50%,var(--accent));overflow:hidden}
+.photo-img{width:100%;height:480px;object-fit:cover;object-position:top center;border-radius:22px;display:block;position:relative;z-index:1}
 .photo-glow{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);width:80%;height:60px;background:radial-gradient(ellipse,rgba(245,166,35,0.3),transparent 70%);filter:blur(16px);z-index:0}
 .float-chip{position:absolute;z-index:5;padding:12px 18px;border-radius:14px;cursor:none}
 .chip-tl{top:24px;left:-28px;animation:chipFloat 5s ease-in-out infinite}
@@ -247,28 +241,64 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 .footer-copy{font-size:13px;color:var(--muted)}
 
 /* ===================== RESPONSIVE ===================== */
-@media(max-width:960px){
-  .hero-grid,.about-grid{grid-template-columns:1fr;gap:50px;text-align:center}
-  .hero-sub,.hero-form{max-width:100%}
+@media(max-width:1024px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .t-grid{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:clamp(36px,5vw,56px)}
+}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-sub{max-width:100%;font-size:16px}
+  .hero-form{max-width:100%}
   .hero-trust{justify-content:center}
-  .hero-photo-scene{max-width:380px;margin:0 auto}
-  .about-grid .reveal-left{order:2}.about-photo-wrap{order:1}
-  .problem-grid,.features-grid,.t-grid,.how-grid{grid-template-columns:1fr}
+  .hero-photo-scene{max-width:320px;margin:0 auto;order:-1}
+  .photo-img{height:340px}
+  .chip-tl{top:12px;left:-10px}
+  .chip-br{bottom:40px;right:-10px}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-photo-wrap{max-width:340px;margin:0 auto}
+  .about-img{height:320px}
+  .about-badge{right:0;bottom:-16px}
+  .how-grid{grid-template-columns:1fr;gap:16px}
   .how-grid::before{display:none}
-  .rule,.label{margin-left:auto;margin-right:auto}
+  .features-grid{grid-template-columns:1fr}
+  .t-grid{grid-template-columns:1fr}
+  .problem-grid{grid-template-columns:1fr}
+  .rule{margin-left:auto;margin-right:auto}
+  .label{margin-left:auto;margin-right:auto;justify-content:center}
   .chips{justify-content:center}
   .nav-links{display:none}
   .nav-ham{display:flex}
-  .proof-item{padding:16px 32px}
+  .proof-item{padding:12px 24px}
 }
 @media(max-width:600px){
-  section{padding:70px 0}
-  h1{font-size:38px}
-  h2{font-size:30px}
-  .footer-inner{flex-direction:column;align-items:flex-start}
-  .proof-inner{flex-direction:column;align-items:center}
-  .proof-item+.proof-item::before{display:none}
+  section{padding:60px 0}
+  .container{padding:0 18px}
+  h1{font-size:34px}
+  h2{font-size:26px}
+  .hero-sub{font-size:15px}
+  #hero{padding:100px 0 60px}
+  .hero-photo-scene{max-width:280px}
+  .photo-img{height:280px}
   .chip-tl,.chip-br{display:none}
+  .proof-inner{flex-direction:column;align-items:center;gap:8px}
+  .proof-item+.proof-item::before{display:none}
+  .proof-item{padding:12px 0;border-top:1px solid var(--border)}
+  .proof-item:first-child{border-top:none}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
+  .how-card{padding:24px 20px}
+  .feature-card,.problem-card,.t-card{padding:22px 18px}
+  .problem-callout{padding:20px 18px}
+  .problem-callout p{font-size:16px}
+  .cta-box .sub{font-size:15px}
+  .faq-btn{padding:16px 18px}
+  .faq-body-inner{padding:0 18px 16px;font-size:14px}
+  .about-body{font-size:15px}
+  .chips{gap:8px}
+  .chip{font-size:12px;padding:6px 14px}
+  nav.scrolled{padding:12px 0}
+  .nav-cta{padding:10px 16px;font-size:13px}
+  .btn-primary{font-size:15px;padding:15px 20px}
 }
 </style>
 </head>
@@ -282,7 +312,6 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 <div class="bg-blobs">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
 </div>
 <canvas id="canvas"></canvas>
 
@@ -330,7 +359,7 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
       <div class="reveal-right">
         <div class="hero-photo-scene">
           <div class="hero-photo-3d" id="photo3d">
-            <div class="photo-frame glass">
+            <div class="photo-frame">
               <img src="./NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Coach" class="photo-img" loading="eager">
               <div class="photo-glow"></div>
             </div>
@@ -632,24 +661,26 @@ const ctx=canvas.getContext('2d');
 let W,H,pts=[];
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
 resize();window.addEventListener('resize',resize,{passive:true});
-function Pt(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.4;this.vy=(Math.random()-.5)*0.4;this.r=Math.random()*1.5+0.5}
-for(let i=0;i<70;i++)pts.push(new Pt());
-function draw(){
+function Pt(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.3;this.vy=(Math.random()-.5)*0.3;this.r=Math.random()*1.2+0.4}
+for(let i=0;i<28;i++)pts.push(new Pt());
+let lastT=0;
+function draw(t){
+  if(t-lastT<20){requestAnimationFrame(draw);return}lastT=t;
   ctx.clearRect(0,0,W,H);
   pts.forEach(p=>{
     p.x+=p.vx;p.y+=p.vy;
     if(p.x<0||p.x>W)p.vx*=-1;
     if(p.y<0||p.y>H)p.vy*=-1;
     ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(245,166,35,0.4)';ctx.fill();
+    ctx.fillStyle='rgba(245,166,35,0.35)';ctx.fill();
   });
   for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-    if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(245,166,35,${0.07*(1-d/130)})`;ctx.stroke()}
+    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d2=dx*dx+dy*dy;
+    if(d2<10000){const d=Math.sqrt(d2);ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(245,166,35,${0.06*(1-d/100)})`;ctx.stroke()}
   }}
   requestAnimationFrame(draw);
 }
-draw();
+requestAnimationFrame(draw);
 
 /* ---- NAV ---- */
 const nav=document.getElementById('nav');

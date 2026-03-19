@@ -331,7 +331,7 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
         <div class="hero-photo-scene">
           <div class="hero-photo-3d" id="photo3d">
             <div class="photo-frame glass">
-              <img src="NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Coach" class="photo-img" loading="eager">
+              <img src="./NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Coach" class="photo-img" loading="eager">
               <div class="photo-glow"></div>
             </div>
             <div class="float-chip chip-tl glass-strong">
@@ -414,7 +414,7 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
     <div class="about-grid">
       <div class="about-photo-wrap reveal-left">
         <div class="about-photo-glow"></div>
-        <img src="NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Expert" class="about-img" loading="lazy">
+        <img src="./NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Expert" class="about-img" loading="lazy">
         <div class="about-badge">AI Automation<br>Expert</div>
       </div>
       <div class="reveal-right">
@@ -670,7 +670,7 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revO
 
 /* ---- COUNTER ---- */
 function animCount(el){
-  const target=+el.dataset.target;
+  const target=+(el.dataset.target||el.dataset.count||0);
   const suffix=el.dataset.suffix||'';
   if(target===0){el.textContent='0'+suffix;return}
   let start=0;const dur=1600;const step=timestamp=>{

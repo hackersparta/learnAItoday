@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn AI Automation &amp; Earn Money Online | Nirmal</title>
+<meta name="description" content="Nirmal teaches AI automation from scratch — no tech background needed. Learn the exact tools and systems to automate your work and earn real money with AI. Join 1,000+ learners today.">
+<meta name="keywords" content="AI automation, earn with AI, learn AI, AI tools, make money with AI, no-code automation, AI freelancing, AI business, Nirmal">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nirmal.ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn AI Automation &amp; Earn Money Online | Nirmal">
+<meta property="og:description" content="Learn AI automation from scratch. No tech background needed. Practical systems, real income — taught by Nirmal.">
+<meta property="og:image" content="NirmalpicNew2.jpeg">
+<meta property="og:url" content="https://nirmal.ai/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nirmal","jobTitle":"AI Automation Coach","description":"Nirmal teaches AI automation and practical strategies to earn money using artificial intelligence tools and workflows.","url":"https://nirmal.ai/","image":"NirmalpicNew2.jpeg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need a tech background to learn AI automation?","acceptedAnswer":{"@type":"Answer","text":"No. Everything is taught step-by-step, assuming zero prior tech knowledge."}},{"@type":"Question","name":"How fast can I start earning with AI?","acceptedAnswer":{"@type":"Answer","text":"Many students land their first AI project within 30 days."}},{"@type":"Question","name":"What AI tools do you cover?","acceptedAnswer":{"@type":"Answer","text":"50+ AI tools including ChatGPT, Claude, Make.com, Zapier, Midjourney, ElevenLabs and more."}},{"@type":"Question","name":"Is this a course or 1-on-1 coaching?","acceptedAnswer":{"@type":"Answer","text":"Both options are available depending on your level."}},{"@type":"Question","name":"What if I don't see results?","acceptedAnswer":{"@type":"Answer","text":"If you follow the system and don't see results within 60 days, we work with you personally until you do."}}]}</script>
+<style>
+/* ===================== RESET ===================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:#050505;color:#fff;font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;cursor:none}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:none}
+
+/* ===================== VARIABLES ===================== */
+:root{
+  --bg:#050505;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
+  --accent:#F5A623;--accent2:#4F9EFF;--red:#E74C3C;--green:#27AE60;
+  --text:#fff;--text2:#9A9A9A;--muted:#555;
+  --border:rgba(255,255,255,0.07);--border-accent:rgba(245,166,35,0.5);
+  --glow:rgba(245,166,35,0.25);--glow2:rgba(79,158,255,0.2);
+  --max-w:1140px;--radius:18px;
+}
+
+/* ===================== CANVAS PARTICLES ===================== */
+#canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.5}
+
+/* ===================== ANIMATED BG BLOBS ===================== */
+.bg-blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);animation:blobFloat 18s ease-in-out infinite alternate}
+.blob-1{width:600px;height:600px;background:rgba(245,166,35,0.06);top:-200px;left:-200px;animation-duration:20s}
+.blob-2{width:500px;height:500px;background:rgba(79,158,255,0.05);top:30%;right:-150px;animation-duration:25s;animation-delay:-8s}
+.blob-3{width:400px;height:400px;background:rgba(245,166,35,0.04);bottom:-100px;left:30%;animation-duration:22s;animation-delay:-4s}
+@keyframes blobFloat{0%{transform:translate(0,0) scale(1)}100%{transform:translate(40px,30px) scale(1.15)}}
+
+/* Grid overlay */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(245,166,35,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,166,35,0.025) 1px,transparent 1px);background-size:70px 70px;pointer-events:none;z-index:0}
+
+/* ===================== CUSTOM CURSOR ===================== */
+#cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.3s,height 0.3s,opacity 0.3s;mix-blend-mode:normal;box-shadow:0 0 20px var(--glow),0 0 40px var(--glow)}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(245,166,35,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.12s ease,width 0.3s,height 0.3s;will-change:transform}
+#cursor.hover{width:20px;height:20px;background:var(--accent)}
+#cursor-ring.hover{width:56px;height:56px;border-color:var(--accent)}
+
+/* ===================== LAYOUT ===================== */
+.container{max-width:var(--max-w);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+section{padding:110px 0;position:relative;z-index:1}
+
+/* ===================== GLASSMORPHISM ===================== */
+.glass{background:var(--surface);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid var(--border);border-radius:var(--radius)}
+.glass-strong{background:rgba(255,255,255,0.06);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius)}
+
+/* ===================== TYPOGRAPHY ===================== */
+.label{font-size:12px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:8px;margin-bottom:12px}
+.label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+h2{font-size:clamp(32px,4.5vw,52px);font-weight:900;line-height:1.05;letter-spacing:-0.03em}
+.grad-text{background:linear-gradient(135deg,#fff 30%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gold{color:var(--accent)}
+.italic{font-style:italic}
+.rule{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:3px;margin:16px 0 24px}
+
+/* ===================== SCROLL REVEAL ===================== */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
+.reveal-left.visible{opacity:1;transform:none}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
+.reveal-right.visible{opacity:1;transform:none}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}.delay-3{transition-delay:0.3s}.delay-4{transition-delay:0.4s}.delay-5{transition-delay:0.5s}
+
+/* ===================== BUTTONS ===================== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;border-radius:12px;transition:all 0.25s;cursor:none;border:none;letter-spacing:0.02em;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 3s infinite;pointer-events:none}
+@keyframes shimmer{0%{left:-100%}100%{left:200%}}
+.btn-primary{padding:16px 28px;font-size:16px;background:var(--accent);color:#050505;box-shadow:0 0 30px rgba(245,166,35,0.3),0 8px 32px rgba(0,0,0,0.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(245,166,35,0.5),0 12px 40px rgba(0,0,0,0.5)}
+.btn-ghost{padding:14px 26px;font-size:15px;background:transparent;color:var(--accent);border:1.5px solid var(--border-accent)}
+.btn-ghost:hover{background:rgba(245,166,35,0.08);transform:translateY(-2px)}
+.btn-full{width:100%}
+
+/* ===================== FORM ===================== */
+.form-group{display:flex;flex-direction:column;gap:10px}
+input[type=text],input[type=email]{width:100%;padding:15px 18px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px;font-size:15px;font-family:'Inter',sans-serif;color:var(--text);outline:none;transition:border-color 0.25s,background 0.25s}
+input::placeholder{color:var(--muted)}
+input:focus{border-color:var(--border-accent);background:rgba(245,166,35,0.04)}
+.form-note{font-size:12px;color:var(--muted);text-align:center}
+
+/* ===================== NAV ===================== */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:all 0.4s}
+nav.scrolled{padding:14px 0;background:rgba(5,5,5,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo{font-size:22px;font-weight:900;letter-spacing:-0.03em;color:var(--text)}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);transition:color 0.2s;letter-spacing:0.01em}
+.nav-links a:hover{color:var(--text)}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.nav-ham span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s;display:block}
+
+/* ===================== HERO ===================== */
+#hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.1);border:1px solid var(--border-accent);border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:24px}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulseDot 2s infinite}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,0.7)}50%{box-shadow:0 0 0 6px transparent}}
+h1{font-size:clamp(40px,5.5vw,68px);font-weight:900;line-height:1.02;letter-spacing:-0.04em;margin-bottom:22px}
+.hero-sub{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:36px;max-width:480px}
+.hero-form{display:flex;flex-direction:column;gap:12px;max-width:460px}
+.hero-trust{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.hero-trust::before{content:'🔒';font-size:11px}
+
+/* 3D Photo Frame */
+.hero-photo-scene{perspective:1000px;width:100%}
+.hero-photo-3d{position:relative;transform-style:preserve-3d;transition:transform 0.1s;border-radius:24px}
+.photo-frame{position:relative;border-radius:24px;overflow:visible}
+.photo-frame::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(135deg,var(--accent) 0%,transparent 50%,var(--accent2) 100%);z-index:0;animation:borderRotate 4s linear infinite}
+@keyframes borderRotate{0%{background:linear-gradient(0deg,var(--accent),transparent,var(--accent2))}100%{background:linear-gradient(360deg,var(--accent),transparent,var(--accent2))}}
+.photo-img{width:100%;height:480px;object-fit:cover;object-position:top center;border-radius:22px;position:relative;z-index:1;display:block}
+.photo-glow{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);width:80%;height:60px;background:radial-gradient(ellipse,rgba(245,166,35,0.3),transparent 70%);filter:blur(16px);z-index:0}
+.float-chip{position:absolute;z-index:5;padding:12px 18px;border-radius:14px;cursor:none}
+.chip-tl{top:24px;left:-28px;animation:chipFloat 5s ease-in-out infinite}
+.chip-br{bottom:60px;right:-28px;animation:chipFloat 5s ease-in-out infinite;animation-delay:-2.5s}
+@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.chip-val{font-size:22px;font-weight:900;color:var(--accent);line-height:1}
+.chip-lbl{font-size:11px;color:var(--text2);font-weight:500;margin-top:2px}
+.hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.4}
+.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.scroll-text{font-size:10px;letter-spacing:0.2em;color:var(--text2);text-transform:uppercase}
+
+/* ===================== PROOF BAR ===================== */
+#proof{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:36px 0;background:rgba(255,255,255,0.02)}
+.proof-inner{display:flex;justify-content:center;flex-wrap:wrap}
+.proof-item{text-align:center;padding:0 56px;position:relative}
+.proof-item+.proof-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:40px;background:var(--border)}
+.proof-num{font-size:38px;font-weight:900;color:var(--accent);letter-spacing:-0.03em;line-height:1}
+.proof-suffix{font-size:22px;color:var(--accent)}
+.proof-lbl{font-size:13px;color:var(--text2);font-weight:500;margin-top:4px}
+
+/* ===================== PROBLEM ===================== */
+#problem .section-head{text-align:center;margin-bottom:60px}
+#problem .label{display:inline-flex}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.problem-card{padding:32px 28px;position:relative;overflow:hidden;border-top:3px solid var(--red);transition:transform 0.3s,border-color 0.3s}
+.problem-card:hover{transform:translateY(-6px)}
+.problem-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(231,76,60,0.06),transparent);border-radius:var(--radius)}
+.p-icon{font-size:32px;margin-bottom:18px}
+.problem-card h3{font-size:19px;font-weight:700;margin-bottom:10px}
+.problem-card p{font-size:14px;color:var(--text2);line-height:1.7}
+.problem-callout{margin-top:40px;padding:28px 36px;text-align:center;background:rgba(245,166,35,0.04)}
+.problem-callout p{font-size:20px;color:var(--text2);line-height:1.6}
+.problem-callout strong{color:var(--accent);font-weight:700}
+
+/* ===================== ABOUT ===================== */
+#about{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:center}
+.about-photo-wrap{position:relative}
+.about-photo-glow{position:absolute;inset:-20px;background:radial-gradient(ellipse at 50% 50%,rgba(245,166,35,0.12),transparent 70%);border-radius:50%;z-index:0;filter:blur(20px)}
+.about-img{width:100%;height:400px;object-fit:cover;object-position:top center;border-radius:24px;position:relative;z-index:1;border:1px solid var(--border-accent)}
+.about-badge{position:absolute;bottom:-20px;right:-20px;z-index:3;padding:16px 20px;background:var(--accent);border-radius:16px;color:#050505;font-size:13px;font-weight:800;line-height:1.3;text-align:center}
+.about-body{font-size:17px;color:var(--text2);line-height:1.8;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{padding:8px 18px;border:1px solid var(--border-accent);border-radius:100px;font-size:13px;font-weight:600;color:var(--accent);background:rgba(245,166,35,0.06)}
+
+/* ===================== HOW IT WORKS ===================== */
+#how .section-head{text-align:center;margin-bottom:64px}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+.how-grid::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:1px;background:linear-gradient(90deg,transparent,var(--border-accent),transparent);z-index:0}
+.how-card{text-align:center;padding:40px 28px;transition:transform 0.3s;position:relative;z-index:1}
+.how-card:hover{transform:translateY(-8px)}
+.how-num{width:80px;height:80px;border-radius:50%;background:rgba(245,166,35,0.1);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:var(--accent);margin:0 auto 24px;position:relative}
+.how-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(245,166,35,0.2)}
+.how-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
+.how-card p{font-size:14px;color:var(--text2);line-height:1.7}
+
+/* ===================== FEATURES ===================== */
+#features .section-head{text-align:center;margin-bottom:60px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature-card{padding:30px 26px;transition:transform 0.1s,box-shadow 0.3s;transform-style:preserve-3d;cursor:none;position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
+.feature-card:hover::before{opacity:1}
+.feature-card:hover{box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(245,166,35,0.08)}
+.f-num{font-size:11px;font-weight:700;letter-spacing:0.3em;color:var(--muted);margin-bottom:14px}
+.f-icon{font-size:30px;margin-bottom:16px}
+.feature-card h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.feature-card p{font-size:14px;color:var(--text2);line-height:1.7}
+
+/* ===================== TESTIMONIALS ===================== */
+#testimonials{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+#testimonials .section-head{text-align:center;margin-bottom:60px}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.t-card{padding:30px 26px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
+.t-card:hover{transform:translateY(-6px);border-color:var(--border-accent)}
+.t-card::before{content:'"';position:absolute;top:16px;right:24px;font-size:80px;font-weight:900;color:rgba(245,166,35,0.06);line-height:1;pointer-events:none}
+.stars{color:var(--accent);font-size:15px;letter-spacing:2px;margin-bottom:16px}
+.t-text{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:24px;font-style:italic}
+.t-author{display:flex;align-items:center;gap:12px}
+.t-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,rgba(245,166,35,0.3),rgba(245,166,35,0.1));border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--accent);flex-shrink:0}
+.t-name{font-size:15px;font-weight:700}
+.t-role{font-size:12px;color:var(--muted);margin-top:1px}
+
+/* ===================== FAQ ===================== */
+#faq .section-head{text-align:center;margin-bottom:60px}
+.faq-wrap{max-width:740px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{border-radius:14px;overflow:hidden;transition:border-color 0.3s}
+.faq-item.open{border-color:var(--border-accent)}
+.faq-btn{width:100%;background:none;border:none;font-family:'Inter',sans-serif;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:none}
+.faq-q{font-size:16px;font-weight:600;color:var(--text)}
+.faq-ico{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text2);transition:all 0.3s;flex-shrink:0;line-height:1}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--accent);color:#050505;border-color:var(--accent)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(.4,0,.2,1)}
+.faq-body-inner{padding:0 26px 22px;font-size:15px;color:var(--text2);line-height:1.8}
+.faq-item.open .faq-body{max-height:300px}
+
+/* ===================== FINAL CTA ===================== */
+#cta{text-align:center;overflow:hidden}
+.cta-glow-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse at 50% 0%,rgba(245,166,35,0.1),transparent 70%);pointer-events:none}
+.cta-box{max-width:620px;margin:0 auto}
+.cta-box h2{margin-bottom:20px}
+.cta-box .sub{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:40px}
+.cta-form{display:flex;flex-direction:column;gap:12px;max-width:500px;margin:0 auto}
+
+/* ===================== FOOTER ===================== */
+footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padding:44px 0 36px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-brand{font-size:20px;font-weight:900;letter-spacing:-0.02em}
+.footer-brand span{color:var(--accent)}
+.footer-links{display:flex;gap:28px;list-style:none}
+.footer-links a{font-size:14px;color:var(--muted);transition:color 0.2s}
+.footer-links a:hover{color:var(--text)}
+.footer-copy{font-size:13px;color:var(--muted)}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:960px){
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:50px;text-align:center}
+  .hero-sub,.hero-form{max-width:100%}
+  .hero-trust{justify-content:center}
+  .hero-photo-scene{max-width:380px;margin:0 auto}
+  .about-grid .reveal-left{order:2}.about-photo-wrap{order:1}
+  .problem-grid,.features-grid,.t-grid,.how-grid{grid-template-columns:1fr}
+  .how-grid::before{display:none}
+  .rule,.label{margin-left:auto;margin-right:auto}
+  .chips{justify-content:center}
+  .nav-links{display:none}
+  .nav-ham{display:flex}
+  .proof-item{padding:16px 32px}
+}
+@media(max-width:600px){
+  section{padding:70px 0}
+  h1{font-size:38px}
+  h2{font-size:30px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .proof-inner{flex-direction:column;align-items:center}
+  .proof-item+.proof-item::before{display:none}
+  .chip-tl,.chip-br{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Background -->
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+<canvas id="canvas"></canvas>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Nirmal<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#features">What You Learn</a></li>
+      <li><a href="#testimonials">Results</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#cta" class="btn btn-ghost">Get Free Guide →</a>
+    <button class="nav-ham" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- LEFT -->
+      <div class="reveal-left">
+        <div class="hero-badge"><div class="badge-dot"></div>AI Automation Coach</div>
+        <h1>
+          <span class="grad-text">Learn AI Automation.</span><br>
+          <span style="color:var(--accent);font-style:italic">Earn Real Money.</span><br>
+          <span style="color:var(--text2);font-size:0.72em;font-weight:700">Starting from zero.</span>
+        </h1>
+        <p class="hero-sub">No tech background needed. Nirmal teaches you the exact AI tools and income systems used by top earners — step by step, from day one.</p>
+        <form class="hero-form" action="#" method="post">
+          <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
+          <input type="email" name="email" placeholder="Your best email address" required autocomplete="email">
+          <button type="submit" class="btn btn-primary btn-full" style="font-size:16px;padding:18px">Send Me the Free AI Starter Guide →</button>
+          <p class="hero-trust">100% free. No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+      <!-- RIGHT: 3D Photo -->
+      <div class="reveal-right">
+        <div class="hero-photo-scene">
+          <div class="hero-photo-3d" id="photo3d">
+            <div class="photo-frame glass">
+              <img src="NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Coach" class="photo-img" loading="eager">
+              <div class="photo-glow"></div>
+            </div>
+            <div class="float-chip chip-tl glass-strong">
+              <div class="chip-val" data-count="1000" data-suffix="+">0+</div>
+              <div class="chip-lbl">Students Trained</div>
+            </div>
+            <div class="float-chip chip-br glass-strong">
+              <div class="chip-val" data-count="50" data-suffix="+">0+</div>
+              <div class="chip-lbl">AI Tools Covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ===== PROOF BAR ===== -->
+<div id="proof">
+  <div class="container">
+    <div class="proof-inner">
+      <div class="proof-item reveal delay-1">
+        <div class="proof-num"><span class="count" data-target="1000" data-suffix="+">0</span></div>
+        <div class="proof-lbl">Students Trained</div>
+      </div>
+      <div class="proof-item reveal delay-2">
+        <div class="proof-num"><span class="count" data-target="50" data-suffix="+">0</span></div>
+        <div class="proof-lbl">AI Tools Covered</div>
+      </div>
+      <div class="proof-item reveal delay-3">
+        <div class="proof-num"><span class="count" data-target="0">0</span></div>
+        <div class="proof-lbl">Tech Background Needed</div>
+      </div>
+      <div class="proof-item reveal delay-4">
+        <div class="proof-num"><span class="count" data-target="30" data-suffix=" days">0</span></div>
+        <div class="proof-lbl">To First Earning</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROBLEM ===== -->
+<section id="problem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label" style="justify-content:center">The Problem</div>
+      <h2>You're watching AI take over.<br><span class="gold italic">You're not part of it yet.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+    </div>
+    <div class="problem-grid">
+      <article class="problem-card glass reveal delay-1">
+        <div class="p-icon">⏩</div>
+        <h3>AI is moving too fast</h3>
+        <p>New tools drop every week. You've tried a few but never built a real system. You feel behind — and it's getting worse every day.</p>
+      </article>
+      <article class="problem-card glass reveal delay-2">
+        <div class="p-icon">💸</div>
+        <h3>Others are earning. You're not.</h3>
+        <p>You've seen people making real money with AI. But you don't have a clear path, a proven plan, or a system that actually works.</p>
+      </article>
+      <article class="problem-card glass reveal delay-3">
+        <div class="p-icon">⌛</div>
+        <h3>Your time is being wasted</h3>
+        <p>You're still doing manually what AI could handle in seconds. Every hour you're not automating is an hour you're falling further behind.</p>
+      </article>
+    </div>
+    <div class="problem-callout glass reveal" style="margin-top:40px">
+      <p>The problem isn't that AI is too hard. <strong>It's that nobody showed you the right starting point.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal-left">
+        <div class="about-photo-glow"></div>
+        <img src="NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Expert" class="about-img" loading="lazy">
+        <div class="about-badge">AI Automation<br>Expert</div>
+      </div>
+      <div class="reveal-right">
+        <div class="label">Your Guide</div>
+        <h2>Hi, I'm <span class="gold">Nirmal.</span></h2>
+        <div class="rule"></div>
+        <p class="about-body">I've spent years learning, testing, and implementing AI automation in real businesses and income streams. I know exactly what works — and what wastes your time.</p>
+        <p class="about-body">My mission is simple: give you the <strong style="color:var(--text)">practical, no-fluff systems</strong> to start automating your work and earning with AI — whether you're a complete beginner or want to add AI income on the side of your current work.</p>
+        <div class="chips">
+          <span class="chip">AI Automation Expert</span>
+          <span class="chip">Practical Systems</span>
+          <span class="chip">Real Results</span>
+          <span class="chip">Step-by-Step</span>
+          <span class="chip">No Fluff</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="label" style="justify-content:center">How It Works</div>
+      <h2>Three steps to your<br><span class="gold italic">first AI income.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+    </div>
+    <div class="how-grid">
+      <div class="how-card glass reveal delay-1">
+        <div class="how-num">01</div>
+        <h3>Get the Free Guide</h3>
+        <p>Enter your email and instantly receive the AI Automation Starter Guide — the exact first moves that get results fast.</p>
+      </div>
+      <div class="how-card glass reveal delay-2">
+        <div class="how-num">02</div>
+        <h3>Follow the System</h3>
+        <p>Step-by-step lessons, tools, and templates. No guessing. No overwhelm. Just a clear path from zero to earning.</p>
+      </div>
+      <div class="how-card glass reveal delay-3">
+        <div class="how-num">03</div>
+        <h3>Earn with AI</h3>
+        <p>Deploy your first automation or service within 30 days. Start building income while others are still just watching.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
+      <div class="label" style="justify-content:center">What You Learn</div>
+      <h2>The complete AI income system<br><span class="gold italic">— from zero.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+    </div>
+    <div class="features-grid">
+      <article class="feature-card glass tilt reveal delay-1">
+        <div class="f-num">01</div>
+        <div class="f-icon">🤖</div>
+        <h3>AI Tools Mastery</h3>
+        <p>Learn the 50+ AI tools that actually save time and make money — ChatGPT, Claude, Make, Zapier, Midjourney, ElevenLabs and more.</p>
+      </article>
+      <article class="feature-card glass tilt reveal delay-2">
+        <div class="f-num">02</div>
+        <div class="f-icon">💰</div>
+        <h3>Earn with AI</h3>
+        <p>5+ income paths: AI freelancing, consulting, digital products, content creation, and automation-as-a-service — all proven.</p>
+      </article>
+      <article class="feature-card glass tilt reveal delay-3">
+        <div class="f-num">03</div>
+        <div class="f-icon">⚡</div>
+        <h3>No-Code Automation</h3>
+        <p>Build powerful workflows that run 24/7 without writing a single line of code. Automate your business, content, and life.</p>
+      </article>
+      <article class="feature-card glass tilt reveal delay-1">
+        <div class="f-num">04</div>
+        <div class="f-icon">📣</div>
+        <h3>Content &amp; Marketing AI</h3>
+        <p>Generate weeks of content in hours. AI systems for writing, video scripts, social media, email, and ads — at scale.</p>
+      </article>
+      <article class="feature-card glass tilt reveal delay-2">
+        <div class="f-num">05</div>
+        <div class="f-icon">📐</div>
+        <h3>AI Business Models</h3>
+        <p>Real business models built on AI that generate recurring income — not one-off gigs. Position yourself as the expert in your niche.</p>
+      </article>
+      <article class="feature-card glass tilt reveal delay-3">
+        <div class="f-num">06</div>
+        <div class="f-icon">🛠️</div>
+        <h3>Live Implementation</h3>
+        <p>No theory dumping. We build real projects together — live workflows, actual client deliverables, and real income from day one.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
+      <div class="label" style="justify-content:center">Real Results</div>
+      <h2>Students who took the leap<br><span class="gold italic">are already earning.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+    </div>
+    <div class="t-grid">
+      <article class="t-card glass reveal delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"I had zero tech background. Nirmal broke everything down so simply that I built my first automation in week one. By month two I had my first client paying me for AI work."</p>
+        <div class="t-author"><div class="t-avatar">A</div><div><div class="t-name">Ahmed R.</div><div class="t-role">Freelancer → AI Consultant</div></div></div>
+      </article>
+      <article class="t-card glass reveal delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"I was spending 5 hours a day on tasks that now take 20 minutes. Nirmal's system changed everything. The income models he teaches? They actually work."</p>
+        <div class="t-author"><div class="t-avatar">S</div><div><div class="t-name">Sara K.</div><div class="t-role">Business Owner</div></div></div>
+      </article>
+      <article class="t-card glass reveal delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="t-text">"I joined skeptical. Now I run 3 AI-powered services from my laptop. The no-code automation alone saved my agency. This is not hype — it's a real system."</p>
+        <div class="t-author"><div class="t-avatar">M</div><div><div class="t-name">Mohamed T.</div><div class="t-role">Agency Owner</div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
+      <div class="label" style="justify-content:center">Common Questions</div>
+      <h2>Everything you want to know<br><span class="gold italic">before you start.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item glass reveal delay-1">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do I need a tech background to learn AI automation?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">No. Everything is taught step-by-step, assuming zero prior tech knowledge. If you can use a smartphone and browse the internet, you can learn this. Most students have no coding background whatsoever.</p></div>
+      </div>
+      <div class="faq-item glass reveal delay-2">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How fast can I start earning with AI?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Many students land their first AI project within 30 days. The speed depends on how quickly you apply what you learn — the systems and templates are ready to deploy from day one.</p></div>
+      </div>
+      <div class="faq-item glass reveal delay-3">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">What AI tools do you cover?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">50+ AI tools in practical, real-world use cases — ChatGPT, Claude, Make.com, Zapier, Midjourney, ElevenLabs, Notion AI and many more. We focus on tools that generate income, not just cool demos.</p></div>
+      </div>
+      <div class="faq-item glass reveal delay-1">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Is this a course or 1-on-1 coaching?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Both options are available. The free guide gives you a full taste. The full program includes structured video lessons, live Q&amp;A sessions, community access, and direct feedback from Nirmal on your work.</p></div>
+      </div>
+      <div class="faq-item glass reveal delay-2">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">What if I don't see results?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">If you follow the system and don't see results within 60 days, we will work with you personally until you do. Your success is not optional — it's the whole point.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="cta">
+  <div class="cta-glow-top"></div>
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="label" style="justify-content:center">Start Today</div>
+      <h2>Build your AI income.<br><span class="gold italic">The system is ready.</span></h2>
+      <div class="rule" style="margin:16px auto"></div>
+      <p class="sub">Get the free AI Automation Starter Guide — the exact first steps Nirmal's best students take to go from zero to earning with AI.</p>
+      <form class="cta-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Your best email address" required autocomplete="email">
+        <button type="submit" class="btn btn-primary btn-full" style="font-size:16px;padding:18px">Yes — Send Me the Free Guide →</button>
+        <p class="form-note">No spam. Just AI tactics that work. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Nirmal<span>.</span></div>
+      <ul class="footer-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Nirmal. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* ---- CURSOR ---- */
+const cur = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'},{passive:true});
+(function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
+document.querySelectorAll('a,button,.tilt,.faq-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.classList.add('hover');ring.classList.add('hover')});
+  el.addEventListener('mouseleave',()=>{cur.classList.remove('hover');ring.classList.remove('hover')});
+});
+// Hide cursor on touch
+window.addEventListener('touchstart',()=>{cur.style.display='none';ring.style.display='none'},{once:true});
+
+/* ---- PARTICLES ---- */
+const canvas=document.getElementById('canvas');
+const ctx=canvas.getContext('2d');
+let W,H,pts=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
+resize();window.addEventListener('resize',resize,{passive:true});
+function Pt(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.4;this.vy=(Math.random()-.5)*0.4;this.r=Math.random()*1.5+0.5}
+for(let i=0;i<70;i++)pts.push(new Pt());
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  pts.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0||p.x>W)p.vx*=-1;
+    if(p.y<0||p.y>H)p.vy*=-1;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(245,166,35,0.4)';ctx.fill();
+  });
+  for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
+    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<130){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(245,166,35,${0.07*(1-d/130)})`;ctx.stroke()}
+  }}
+  requestAnimationFrame(draw);
+}
+draw();
+
+/* ---- NAV ---- */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+function toggleNav(){
+  const ul=nav.querySelector('.nav-links');
+  ul.style.cssText=ul.style.display==='flex'?'':
+    'display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:rgba(5,5,5,0.97);padding:20px 28px;gap:22px;border-bottom:1px solid rgba(255,255,255,0.07)';
+}
+window.toggleNav=toggleNav;
+
+/* ---- SCROLL REVEAL ---- */
+const revOpts={threshold:0.12,rootMargin:'0px 0px -40px 0px'};
+const revObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target)}});
+},revOpts);
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revObs.observe(el));
+
+/* ---- COUNTER ---- */
+function animCount(el){
+  const target=+el.dataset.target;
+  const suffix=el.dataset.suffix||'';
+  if(target===0){el.textContent='0'+suffix;return}
+  let start=0;const dur=1600;const step=timestamp=>{
+    if(!start)start=timestamp;
+    const prog=Math.min((timestamp-start)/dur,1);
+    const ease=1-Math.pow(1-prog,3);
+    el.textContent=Math.floor(ease*target)+(prog>=1?suffix:'');
+    if(prog<1)requestAnimationFrame(step);
+  };requestAnimationFrame(step);
+}
+const countObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animCount(e.target);countObs.unobserve(e.target)}});
+},{threshold:0.5});
+document.querySelectorAll('.count,[data-count]').forEach(el=>countObs.observe(el));
+
+/* ---- 3D TILT ---- */
+document.querySelectorAll('.tilt').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(700px) rotateX(${-y*8}deg) rotateY(${x*8}deg) translateZ(10px)`;
+  });
+  card.addEventListener('mouseleave',()=>{card.style.transform='perspective(700px) rotateX(0) rotateY(0) translateZ(0)'});
+});
+
+/* ---- 3D HERO PHOTO PARALLAX ---- */
+const p3d=document.getElementById('photo3d');
+if(p3d){
+  document.addEventListener('mousemove',e=>{
+    const cx=window.innerWidth/2,cy=window.innerHeight/2;
+    const x=(e.clientX-cx)/cx*.08;
+    const y=(e.clientY-cy)/cy*.08;
+    p3d.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*6}deg)`;
+  },{passive:true});
+}
+
+/* ---- FAQ ---- */
+function faq(btn){
+  const item=btn.closest('.faq-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-btn').setAttribute('aria-expanded','false')});
+  if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
+}
+window.faq=faq;
+
+})();
+</script>
+</body>
+</html>

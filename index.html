@@ -3,330 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn AI Automation &amp; Earn Money Online | Nirmal</title>
-<meta name="description" content="Nirmal teaches AI automation from scratch — no tech background needed. Learn the exact tools and systems to automate your work and earn real money with AI. Join 1,000+ learners today.">
-<meta name="keywords" content="AI automation, earn with AI, learn AI, AI tools, make money with AI, no-code automation, AI freelancing, AI business, Nirmal">
+<title>Learn AI Today — AI Automation & Custom Solutions for Business</title>
+<meta name="description" content="We help businesses save 20+ hours per week with custom AI agents, workflow automation, and AI training. Book a free consultation with Nirmal.">
+<meta name="keywords" content="AI automation, custom AI agents, business automation, AI consulting, AI training, workflow automation, Learn AI Today">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://nirmal.ai/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Learn AI Automation &amp; Earn Money Online | Nirmal">
-<meta property="og:description" content="Learn AI automation from scratch. No tech background needed. Practical systems, real income — taught by Nirmal.">
+<meta property="og:title" content="Learn AI Today — AI Automation for Business">
+<meta property="og:description" content="Custom AI agents, workflow automation, and AI training for businesses. Save 20+ hours per week.">
 <meta property="og:image" content="NirmalpicNew2.jpeg">
-<meta property="og:url" content="https://nirmal.ai/">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Nirmal","jobTitle":"AI Automation Coach","description":"Nirmal teaches AI automation and practical strategies to earn money using artificial intelligence tools and workflows.","url":"https://nirmal.ai/","image":"NirmalpicNew2.jpeg"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need a tech background to learn AI automation?","acceptedAnswer":{"@type":"Answer","text":"No. Everything is taught step-by-step, assuming zero prior tech knowledge."}},{"@type":"Question","name":"How fast can I start earning with AI?","acceptedAnswer":{"@type":"Answer","text":"Many students land their first AI project within 30 days."}},{"@type":"Question","name":"What AI tools do you cover?","acceptedAnswer":{"@type":"Answer","text":"50+ AI tools including ChatGPT, Claude, Make.com, Zapier, Midjourney, ElevenLabs and more."}},{"@type":"Question","name":"Is this a course or 1-on-1 coaching?","acceptedAnswer":{"@type":"Answer","text":"Both options are available depending on your level."}},{"@type":"Question","name":"What if I don't see results?","acceptedAnswer":{"@type":"Answer","text":"If you follow the system and don't see results within 60 days, we work with you personally until you do."}}]}</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ===================== RESET ===================== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px}
-body{background:#050505;color:#fff;font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;cursor:none}
+body{background:#FAFBFC;color:#1a1a2e;font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
-button{cursor:none}
 
-/* ===================== VARIABLES ===================== */
 :root{
-  --bg:#050505;--surface:rgba(255,255,255,0.04);--surface2:rgba(255,255,255,0.07);
-  --accent:#F5A623;--accent2:#4F9EFF;--red:#E74C3C;--green:#27AE60;
-  --text:#fff;--text2:#9A9A9A;--muted:#555;
-  --border:rgba(255,255,255,0.07);--border-accent:rgba(245,166,35,0.5);
-  --glow:rgba(245,166,35,0.25);--glow2:rgba(79,158,255,0.2);
-  --max-w:1140px;--radius:18px;
+  --primary:#1B2E5A;
+  --primary-light:#2A4A8C;
+  --accent:#2563EB;
+  --accent-light:#DBEAFE;
+  --accent-dark:#1D4ED8;
+  --bg:#FAFBFC;
+  --white:#FFFFFF;
+  --text:#1a1a2e;
+  --text2:#4A5568;
+  --text3:#718096;
+  --border:#E2E8F0;
+  --border2:#CBD5E1;
+  --surface:#F1F5F9;
+  --max-w:1120px;
+  --radius:12px;
+  --shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg:0 10px 40px rgba(0,0,0,0.08);
 }
 
-/* ===================== CANVAS PARTICLES ===================== */
-#canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.5}
-
-/* ===================== ANIMATED BG BLOBS ===================== */
-.bg-blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.blob{position:absolute;border-radius:50%;will-change:transform;animation:blobFloat 20s ease-in-out infinite alternate}
-.blob-1{width:500px;height:500px;background:radial-gradient(circle,rgba(245,166,35,0.09),transparent 70%);top:-150px;left:-150px}
-.blob-2{width:450px;height:450px;background:radial-gradient(circle,rgba(79,158,255,0.06),transparent 70%);bottom:-100px;right:-100px;animation-delay:-10s}
-@keyframes blobFloat{0%{transform:translate(0,0)}100%{transform:translate(30px,20px)}}
-
-/* ===================== CUSTOM CURSOR ===================== */
-#cursor{position:fixed;width:12px;height:12px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s,width 0.3s,height 0.3s,opacity 0.3s;mix-blend-mode:normal;box-shadow:0 0 20px var(--glow),0 0 40px var(--glow)}
-#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(245,166,35,0.5);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform 0.12s ease,width 0.3s,height 0.3s;will-change:transform}
-#cursor.hover{width:20px;height:20px;background:var(--accent)}
-#cursor-ring.hover{width:56px;height:56px;border-color:var(--accent)}
-
-/* ===================== LAYOUT ===================== */
-.container{max-width:var(--max-w);margin:0 auto;padding:0 28px;position:relative;z-index:2}
-section{padding:110px 0;position:relative;z-index:1}
-
-/* ===================== GLASSMORPHISM ===================== */
-.glass{background:rgba(20,20,20,0.85);border:1px solid var(--border);border-radius:var(--radius)}
-.glass-strong{background:rgba(28,28,28,0.92);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius)}
-
-/* ===================== TYPOGRAPHY ===================== */
-.label{font-size:12px;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:8px;margin-bottom:12px}
-.label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-h2{font-size:clamp(32px,4.5vw,52px);font-weight:900;line-height:1.05;letter-spacing:-0.03em}
-.grad-text{background:linear-gradient(135deg,#fff 30%,var(--accent) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.gold{color:var(--accent)}
-.italic{font-style:italic}
-.rule{width:48px;height:3px;background:linear-gradient(90deg,var(--accent),transparent);border-radius:3px;margin:16px 0 24px}
-
-/* ===================== SCROLL REVEAL ===================== */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
-.reveal-left.visible{opacity:1;transform:none}
-.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
-.reveal-right.visible{opacity:1;transform:none}
-.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}.delay-3{transition-delay:0.3s}.delay-4{transition-delay:0.4s}.delay-5{transition-delay:0.5s}
-
-/* ===================== BUTTONS ===================== */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Inter',sans-serif;font-weight:700;border-radius:12px;transition:all 0.25s;cursor:none;border:none;letter-spacing:0.02em;position:relative;overflow:hidden}
-.btn::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);animation:shimmer 3s infinite;pointer-events:none}
-@keyframes shimmer{0%{left:-100%}100%{left:200%}}
-.btn-primary{padding:16px 28px;font-size:16px;background:var(--accent);color:#050505;box-shadow:0 0 30px rgba(245,166,35,0.3),0 8px 32px rgba(0,0,0,0.4)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(245,166,35,0.5),0 12px 40px rgba(0,0,0,0.5)}
-.btn-ghost{padding:14px 26px;font-size:15px;background:transparent;color:var(--accent);border:1.5px solid var(--border-accent)}
-.btn-ghost:hover{background:rgba(245,166,35,0.08);transform:translateY(-2px)}
-.btn-full{width:100%}
-
-/* ===================== FORM ===================== */
-.form-group{display:flex;flex-direction:column;gap:10px}
-input[type=text],input[type=email]{width:100%;padding:15px 18px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px;font-size:15px;font-family:'Inter',sans-serif;color:var(--text);outline:none;transition:border-color 0.25s,background 0.25s}
-input::placeholder{color:var(--muted)}
-input:focus{border-color:var(--border-accent);background:rgba(245,166,35,0.04)}
-.form-note{font-size:12px;color:var(--muted);text-align:center}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+section{padding:100px 0}
 
 /* ===================== NAV ===================== */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:all 0.4s}
-nav.scrolled{padding:14px 0;background:rgba(5,5,5,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.nav-logo{font-size:22px;font-weight:900;letter-spacing:-0.03em;color:var(--text)}
-.nav-logo span{color:var(--accent)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:var(--primary);letter-spacing:-0.02em}
+.nav-logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:14px}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-size:14px;font-weight:500;color:var(--text2);transition:color 0.2s;letter-spacing:0.01em}
-.nav-links a:hover{color:var(--text)}
-.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{padding:10px 22px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;border-radius:8px;transition:all 0.2s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.nav-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
 .nav-ham span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s;display:block}
 
 /* ===================== HERO ===================== */
-#hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,0.1);border:1px solid var(--border-accent);border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:24px}
-.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulseDot 2s infinite}
-@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,0.7)}50%{box-shadow:0 0 0 6px transparent}}
-h1{font-size:clamp(40px,5.5vw,68px);font-weight:900;line-height:1.02;letter-spacing:-0.04em;margin-bottom:22px}
-.hero-sub{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:36px;max-width:480px}
-.hero-form{display:flex;flex-direction:column;gap:12px;max-width:460px}
-.hero-trust{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
-.hero-trust::before{content:'🔒';font-size:11px}
+#hero{padding:140px 0 100px;background:linear-gradient(180deg,#EEF2FF 0%,var(--bg) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-light);border:1px solid rgba(37,99,235,0.2);border-radius:100px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:20px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(36px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.03em;color:var(--primary);margin-bottom:20px}
+h1 .highlight{color:var(--accent)}
+.hero-sub{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:32px;max-width:500px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.btn-primary{padding:14px 28px;background:var(--accent);color:#fff;font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.25)}
+.btn-outline{padding:14px 28px;background:transparent;color:var(--primary);font-size:16px;font-weight:600;border-radius:10px;border:2px solid var(--border2);cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
+.hero-trust{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text3)}
+.trust-item{display:flex;align-items:center;gap:6px}
+.trust-check{color:var(--accent);font-weight:700}
 
-/* 3D Photo Frame */
-.hero-photo-scene{perspective:1000px;width:100%}
-.hero-photo-3d{position:relative;transform-style:preserve-3d;transition:transform 0.15s ease-out;border-radius:24px;will-change:transform}
-.photo-frame{position:relative;border-radius:24px;padding:3px;background:linear-gradient(135deg,var(--accent),rgba(79,158,255,0.6) 50%,var(--accent));overflow:hidden}
-.photo-img{width:100%;height:480px;object-fit:cover;object-position:top center;border-radius:22px;display:block;position:relative;z-index:1}
-.photo-glow{position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);width:80%;height:60px;background:radial-gradient(ellipse,rgba(245,166,35,0.3),transparent 70%);filter:blur(16px);z-index:0}
-.float-chip{position:absolute;z-index:5;padding:12px 18px;border-radius:14px;cursor:none}
-.chip-tl{top:24px;left:-28px;animation:chipFloat 5s ease-in-out infinite}
-.chip-br{bottom:60px;right:-28px;animation:chipFloat 5s ease-in-out infinite;animation-delay:-2.5s}
-@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.chip-val{font-size:22px;font-weight:900;color:var(--accent);line-height:1}
-.chip-lbl{font-size:11px;color:var(--text2);font-weight:500;margin-top:2px}
-.hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.4}
-.scroll-line{width:1px;height:50px;background:linear-gradient(to bottom,var(--accent),transparent);animation:scrollLine 2s ease-in-out infinite}
-@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.scroll-text{font-size:10px;letter-spacing:0.2em;color:var(--text2);text-transform:uppercase}
+/* Hero image */
+.hero-visual{position:relative}
+.hero-img-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.hero-img{width:100%;height:460px;object-fit:cover;object-position:top center}
+.hero-float{position:absolute;background:var(--white);border-radius:12px;padding:14px 18px;box-shadow:0 8px 30px rgba(0,0,0,0.12);border:1px solid var(--border)}
+.hero-float-tl{top:20px;left:-20px;animation:float 4s ease-in-out infinite}
+.hero-float-br{bottom:40px;right:-20px;animation:float 4s ease-in-out infinite;animation-delay:-2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float-num{font-size:24px;font-weight:900;color:var(--accent);line-height:1}
+.float-label{font-size:11px;color:var(--text3);font-weight:500;margin-top:3px}
 
-/* ===================== PROOF BAR ===================== */
-#proof{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:36px 0;background:rgba(255,255,255,0.02)}
-.proof-inner{display:flex;justify-content:center;flex-wrap:wrap}
-.proof-item{text-align:center;padding:0 56px;position:relative}
-.proof-item+.proof-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:40px;background:var(--border)}
-.proof-num{font-size:38px;font-weight:900;color:var(--accent);letter-spacing:-0.03em;line-height:1}
-.proof-suffix{font-size:22px;color:var(--accent)}
-.proof-lbl{font-size:13px;color:var(--text2);font-weight:500;margin-top:4px}
+/* ===================== LOGOS / TRUST BAR ===================== */
+#trust-bar{padding:48px 0;border-bottom:1px solid var(--border);background:var(--white)}
+.trust-bar-inner{text-align:center}
+.trust-bar-label{font-size:13px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:24px}
+.trust-logos{display:flex;justify-content:center;flex-wrap:wrap;gap:40px;align-items:center;opacity:0.5}
+.trust-logos span{font-size:18px;font-weight:800;color:var(--text2);letter-spacing:-0.01em}
 
-/* ===================== PROBLEM ===================== */
-#problem .section-head{text-align:center;margin-bottom:60px}
-#problem .label{display:inline-flex}
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.problem-card{padding:32px 28px;position:relative;overflow:hidden;border-top:3px solid var(--red);transition:transform 0.3s,border-color 0.3s}
-.problem-card:hover{transform:translateY(-6px)}
-.problem-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(231,76,60,0.06),transparent);border-radius:var(--radius)}
-.p-icon{font-size:32px;margin-bottom:18px}
-.problem-card h3{font-size:19px;font-weight:700;margin-bottom:10px}
-.problem-card p{font-size:14px;color:var(--text2);line-height:1.7}
-.problem-callout{margin-top:40px;padding:28px 36px;text-align:center;background:rgba(245,166,35,0.04)}
-.problem-callout p{font-size:20px;color:var(--text2);line-height:1.6}
-.problem-callout strong{color:var(--accent);font-weight:700}
-
-/* ===================== ABOUT ===================== */
-#about{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:center}
-.about-photo-wrap{position:relative}
-.about-photo-glow{position:absolute;inset:-20px;background:radial-gradient(ellipse at 50% 50%,rgba(245,166,35,0.12),transparent 70%);border-radius:50%;z-index:0;filter:blur(20px)}
-.about-img{width:100%;height:400px;object-fit:cover;object-position:top center;border-radius:24px;position:relative;z-index:1;border:1px solid var(--border-accent)}
-.about-badge{position:absolute;bottom:-20px;right:-20px;z-index:3;padding:16px 20px;background:var(--accent);border-radius:16px;color:#050505;font-size:13px;font-weight:800;line-height:1.3;text-align:center}
-.about-body{font-size:17px;color:var(--text2);line-height:1.8;margin-bottom:20px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.chip{padding:8px 18px;border:1px solid var(--border-accent);border-radius:100px;font-size:13px;font-weight:600;color:var(--accent);background:rgba(245,166,35,0.06)}
+/* ===================== SERVICES ===================== */
+#services{background:var(--white);border-top:1px solid var(--border)}
+.section-label{font-size:12px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-head{margin-bottom:60px}
+.section-head h2{font-size:clamp(28px,3.5vw,42px);font-weight:900;line-height:1.1;letter-spacing:-0.02em;color:var(--primary)}
+.section-head p{font-size:17px;color:var(--text2);margin-top:16px;max-width:560px;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px 28px;transition:all 0.3s;position:relative;overflow:hidden}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);opacity:0;transition:opacity 0.3s}
+.service-card:hover::before{opacity:1}
+.s-icon{width:56px;height:56px;background:var(--accent-light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
+.service-card h3{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:10px}
+.service-card p{font-size:14px;color:var(--text2);line-height:1.7}
+.service-card ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.service-card li{font-size:13px;color:var(--text2);display:flex;align-items:flex-start;gap:8px}
+.service-card li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0}
 
 /* ===================== HOW IT WORKS ===================== */
-#how .section-head{text-align:center;margin-bottom:64px}
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
-.how-grid::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:1px;background:linear-gradient(90deg,transparent,var(--border-accent),transparent);z-index:0}
-.how-card{text-align:center;padding:40px 28px;transition:transform 0.3s;position:relative;z-index:1}
-.how-card:hover{transform:translateY(-8px)}
-.how-num{width:80px;height:80px;border-radius:50%;background:rgba(245,166,35,0.1);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:var(--accent);margin:0 auto 24px;position:relative}
-.how-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(245,166,35,0.2)}
-.how-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
-.how-card p{font-size:14px;color:var(--text2);line-height:1.7}
+#process{background:var(--bg)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-grid::before{content:'';position:absolute;top:44px;left:calc(12.5% + 24px);right:calc(12.5% + 24px);height:2px;background:var(--border);z-index:0}
+.step-card{text-align:center;position:relative;z-index:1}
+.step-num{width:88px;height:88px;border-radius:50%;background:var(--white);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--accent);margin:0 auto 20px;position:relative;transition:all 0.3s}
+.step-card:hover .step-num{border-color:var(--accent);background:var(--accent-light)}
+.step-num-inner{font-size:28px}
+.step-card h3{font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
+.step-card p{font-size:14px;color:var(--text2);line-height:1.6;max-width:220px;margin:0 auto}
 
-/* ===================== FEATURES ===================== */
-#features .section-head{text-align:center;margin-bottom:60px}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feature-card{padding:30px 26px;transition:transform 0.1s,box-shadow 0.3s;transform-style:preserve-3d;cursor:none;position:relative;overflow:hidden}
-.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
-.feature-card:hover::before{opacity:1}
-.feature-card:hover{box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 40px rgba(245,166,35,0.08)}
-.f-num{font-size:11px;font-weight:700;letter-spacing:0.3em;color:var(--muted);margin-bottom:14px}
-.f-icon{font-size:30px;margin-bottom:16px}
-.feature-card h3{font-size:18px;font-weight:700;margin-bottom:10px}
-.feature-card p{font-size:14px;color:var(--text2);line-height:1.7}
+/* ===================== RESULTS ===================== */
+#results{background:var(--primary);color:#fff;position:relative;overflow:hidden}
+#results::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:rgba(37,99,235,0.15)}
+#results .section-label{color:rgba(255,255,255,0.6)}
+#results h2{color:#fff}
+#results p{color:rgba(255,255,255,0.7)}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.result-item{text-align:center}
+.result-num{font-size:48px;font-weight:900;color:#fff;line-height:1;margin-bottom:8px}
+.result-label{font-size:14px;color:rgba(255,255,255,0.6);font-weight:500}
 
-/* ===================== TESTIMONIALS ===================== */
-#testimonials{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-#testimonials .section-head{text-align:center;margin-bottom:60px}
-.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.t-card{padding:30px 26px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
-.t-card:hover{transform:translateY(-6px);border-color:var(--border-accent)}
-.t-card::before{content:'"';position:absolute;top:16px;right:24px;font-size:80px;font-weight:900;color:rgba(245,166,35,0.06);line-height:1;pointer-events:none}
-.stars{color:var(--accent);font-size:15px;letter-spacing:2px;margin-bottom:16px}
-.t-text{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:24px;font-style:italic}
-.t-author{display:flex;align-items:center;gap:12px}
-.t-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,rgba(245,166,35,0.3),rgba(245,166,35,0.1));border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--accent);flex-shrink:0}
-.t-name{font-size:15px;font-weight:700}
-.t-role{font-size:12px;color:var(--muted);margin-top:1px}
+/* ===================== ABOUT ===================== */
+#about{background:var(--white);border-top:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center}
+.about-img-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.about-img{width:100%;height:420px;object-fit:cover;object-position:top center}
+.about-badge{position:absolute;bottom:20px;left:20px;background:var(--accent);color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700}
+.about-content h2{margin-bottom:20px}
+.about-body{font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+.skills-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.skill-tag{padding:6px 16px;background:var(--surface);border:1px solid var(--border);border-radius:100px;font-size:13px;font-weight:600;color:var(--text2)}
+
+/* ===================== USE CASES ===================== */
+#usecases{background:var(--bg)}
+.usecases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.usecase-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:28px 24px;display:flex;gap:18px;transition:all 0.3s}
+.usecase-card:hover{box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.uc-icon{width:48px;height:48px;background:var(--accent-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.usecase-card h3{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:6px}
+.usecase-card p{font-size:14px;color:var(--text2);line-height:1.6}
 
 /* ===================== FAQ ===================== */
-#faq .section-head{text-align:center;margin-bottom:60px}
-.faq-wrap{max-width:740px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-.faq-item{border-radius:14px;overflow:hidden;transition:border-color 0.3s}
-.faq-item.open{border-color:var(--border-accent)}
-.faq-btn{width:100%;background:none;border:none;font-family:'Inter',sans-serif;padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:none}
+#faq{background:var(--white);border-top:1px solid var(--border)}
+.faq-wrap{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s}
+.faq-item.open{border-color:var(--accent)}
+.faq-btn{width:100%;background:none;border:none;font-family:'Inter',sans-serif;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:pointer}
 .faq-q{font-size:16px;font-weight:600;color:var(--text)}
-.faq-ico{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text2);transition:all 0.3s;flex-shrink:0;line-height:1}
-.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--accent);color:#050505;border-color:var(--accent)}
+.faq-ico{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text3);transition:all 0.3s;flex-shrink:0}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--accent);color:#fff;border-color:var(--accent)}
 .faq-body{max-height:0;overflow:hidden;transition:max-height 0.35s cubic-bezier(.4,0,.2,1)}
-.faq-body-inner{padding:0 26px 22px;font-size:15px;color:var(--text2);line-height:1.8}
+.faq-body-inner{padding:0 24px 20px;font-size:15px;color:var(--text2);line-height:1.8}
 .faq-item.open .faq-body{max-height:300px}
 
-/* ===================== FINAL CTA ===================== */
-#cta{text-align:center;overflow:hidden}
-.cta-glow-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse at 50% 0%,rgba(245,166,35,0.1),transparent 70%);pointer-events:none}
-.cta-box{max-width:620px;margin:0 auto}
-.cta-box h2{margin-bottom:20px}
-.cta-box .sub{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:40px}
-.cta-form{display:flex;flex-direction:column;gap:12px;max-width:500px;margin:0 auto}
+/* ===================== CTA ===================== */
+#cta{background:linear-gradient(135deg,var(--primary) 0%,#1e3a6e 100%);color:#fff;text-align:center;padding:80px 0}
+.cta-box{max-width:600px;margin:0 auto}
+.cta-box h2{color:#fff;font-size:clamp(28px,3.5vw,40px);margin-bottom:16px}
+.cta-sub{font-size:17px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:36px}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-white{padding:16px 32px;background:#fff;color:var(--primary);font-size:16px;font-weight:700;border-radius:10px;border:none;cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:8px}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.btn-ghost-white{padding:16px 32px;background:transparent;color:#fff;font-size:16px;font-weight:600;border-radius:10px;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:all 0.2s;font-family:'Inter',sans-serif}
+.btn-ghost-white:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
 
 /* ===================== FOOTER ===================== */
-footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padding:44px 0 36px}
+footer{background:var(--primary);color:rgba(255,255,255,0.6);padding:48px 0 36px;border-top:1px solid rgba(255,255,255,0.1)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
-.footer-brand{font-size:20px;font-weight:900;letter-spacing:-0.02em}
-.footer-brand span{color:var(--accent)}
-.footer-links{display:flex;gap:28px;list-style:none}
-.footer-links a{font-size:14px;color:var(--muted);transition:color 0.2s}
-.footer-links a:hover{color:var(--text)}
-.footer-copy{font-size:13px;color:var(--muted)}
+.footer-brand{font-size:18px;font-weight:800;color:#fff;display:flex;align-items:center;gap:8px}
+.footer-brand-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:11px}
+.footer-links{display:flex;gap:24px;list-style:none}
+.footer-links a{font-size:14px;color:rgba(255,255,255,0.5);transition:color 0.2s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:13px;color:rgba(255,255,255,0.4)}
+
+/* ===================== SCROLL REVEAL ===================== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s cubic-bezier(.16,1,.3,1),transform 0.6s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.delay-1{transition-delay:0.1s}.delay-2{transition-delay:0.2s}.delay-3{transition-delay:0.3s}.delay-4{transition-delay:0.4s}
 
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:1024px){
-  .features-grid{grid-template-columns:repeat(2,1fr)}
-  .t-grid{grid-template-columns:repeat(2,1fr)}
-  h1{font-size:clamp(36px,5vw,56px)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .results-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .process-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .process-grid::before{display:none}
 }
 @media(max-width:860px){
   .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
-  .hero-sub{max-width:100%;font-size:16px}
-  .hero-form{max-width:100%}
+  .hero-sub{max-width:100%}
+  .hero-actions{justify-content:center}
   .hero-trust{justify-content:center}
-  .hero-photo-scene{max-width:320px;margin:0 auto;order:-1}
-  .photo-img{height:340px}
-  .chip-tl{top:12px;left:-10px}
-  .chip-br{bottom:40px;right:-10px}
+  .hero-visual{max-width:360px;margin:0 auto;order:-1}
+  .hero-img{height:340px}
+  .hero-float-tl{left:0}.hero-float-br{right:0}
   .about-grid{grid-template-columns:1fr;gap:36px}
-  .about-photo-wrap{max-width:340px;margin:0 auto}
+  .about-img-wrap{max-width:360px;margin:0 auto}
   .about-img{height:320px}
-  .about-badge{right:0;bottom:-16px}
-  .how-grid{grid-template-columns:1fr;gap:16px}
-  .how-grid::before{display:none}
-  .features-grid{grid-template-columns:1fr}
-  .t-grid{grid-template-columns:1fr}
-  .problem-grid{grid-template-columns:1fr}
-  .rule{margin-left:auto;margin-right:auto}
-  .label{margin-left:auto;margin-right:auto;justify-content:center}
-  .chips{justify-content:center}
+  .usecases-grid{grid-template-columns:1fr}
   .nav-links{display:none}
   .nav-ham{display:flex}
-  .proof-item{padding:12px 24px}
+  .services-grid{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   section{padding:60px 0}
   .container{padding:0 18px}
-  h1{font-size:34px}
-  h2{font-size:26px}
-  .hero-sub{font-size:15px}
-  #hero{padding:100px 0 60px}
-  .hero-photo-scene{max-width:280px}
-  .photo-img{height:280px}
-  .chip-tl,.chip-br{display:none}
-  .proof-inner{flex-direction:column;align-items:center;gap:8px}
-  .proof-item+.proof-item::before{display:none}
-  .proof-item{padding:12px 0;border-top:1px solid var(--border)}
-  .proof-item:first-child{border-top:none}
+  h1{font-size:32px}
+  #hero{padding:110px 0 60px}
+  .hero-float{display:none}
+  .results-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .result-num{font-size:36px}
+  .process-grid{grid-template-columns:1fr;gap:16px}
+  .step-num{width:64px;height:64px}
   .footer-inner{flex-direction:column;align-items:flex-start;gap:16px}
-  .how-card{padding:24px 20px}
-  .feature-card,.problem-card,.t-card{padding:22px 18px}
-  .problem-callout{padding:20px 18px}
-  .problem-callout p{font-size:16px}
-  .cta-box .sub{font-size:15px}
-  .faq-btn{padding:16px 18px}
-  .faq-body-inner{padding:0 18px 16px;font-size:14px}
-  .about-body{font-size:15px}
-  .chips{gap:8px}
-  .chip{font-size:12px;padding:6px 14px}
-  nav.scrolled{padding:12px 0}
-  .nav-cta{padding:10px 16px;font-size:13px}
-  .btn-primary{font-size:15px;padding:15px 20px}
+  .cta-actions{flex-direction:column;align-items:center}
+  .btn-white,.btn-ghost-white{width:100%;justify-content:center}
 }
 </style>
 </head>
 <body>
 
-<!-- Cursor -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-
-<!-- Background -->
-<div class="bg-blobs">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-</div>
-<canvas id="canvas"></canvas>
-
 <!-- ===== NAV ===== -->
 <nav id="nav">
   <div class="container nav-inner">
-    <a href="#" class="nav-logo">Nirmal<span>.</span></a>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">AI</div>
+      Learn AI Today
+    </a>
     <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How It Works</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#how">How It Works</a></li>
-      <li><a href="#features">What You Learn</a></li>
-      <li><a href="#testimonials">Results</a></li>
+      <li><a href="#usecases">Use Cases</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="#cta" class="btn btn-ghost">Get Free Guide →</a>
+    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%20Nirmal%2C%20I%27d%20like%20to%20discuss%20AI%20automation%20for%20my%20business" class="nav-cta" target="_blank">
+      Book a Free Call
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
     <button class="nav-ham" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -339,100 +262,166 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 <section id="hero">
   <div class="container">
     <div class="hero-grid">
-      <!-- LEFT -->
-      <div class="reveal-left">
-        <div class="hero-badge"><div class="badge-dot"></div>AI Automation Coach</div>
+      <div class="reveal">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          AI Solutions for Business
+        </div>
         <h1>
-          <span class="grad-text">Learn AI Automation.</span><br>
-          <span style="color:var(--accent);font-style:italic">Earn Real Money.</span><br>
-          <span style="color:var(--text2);font-size:0.72em;font-weight:700">Starting from zero.</span>
+          We help businesses<br>
+          <span class="highlight">save 20+ hours/week</span><br>
+          with AI automation.
         </h1>
-        <p class="hero-sub">No tech background needed. Nirmal teaches you the exact AI tools and income systems used by top earners — step by step, from day one.</p>
-        <form class="hero-form" action="#" method="post">
-          <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
-          <input type="email" name="email" placeholder="Your best email address" required autocomplete="email">
-          <button type="submit" class="btn btn-primary btn-full" style="font-size:16px;padding:18px">Send Me the Free AI Starter Guide →</button>
-          <p class="hero-trust">100% free. No spam. Unsubscribe anytime.</p>
-        </form>
+        <p class="hero-sub">Custom AI agents, workflow automation, and AI training — designed to cut costs, eliminate repetitive work, and scale your operations.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%20Nirmal%2C%20I%27d%20like%20a%20free%20AI%20consultation%20for%20my%20business" class="btn-primary" target="_blank">
+            Get a Free Consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn-outline">See Our Services</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item"><span class="trust-check">&#10003;</span> No long-term contracts</span>
+          <span class="trust-item"><span class="trust-check">&#10003;</span> Results in 2 weeks</span>
+          <span class="trust-item"><span class="trust-check">&#10003;</span> Free initial audit</span>
+        </div>
       </div>
-      <!-- RIGHT: 3D Photo -->
-      <div class="reveal-right">
-        <div class="hero-photo-scene">
-          <div class="hero-photo-3d" id="photo3d">
-            <div class="photo-frame">
-              <img src="./NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Coach" class="photo-img" loading="eager">
-              <div class="photo-glow"></div>
-            </div>
-            <div class="float-chip chip-tl glass-strong">
-              <div class="chip-val" data-count="1000" data-suffix="+">0+</div>
-              <div class="chip-lbl">Students Trained</div>
-            </div>
-            <div class="float-chip chip-br glass-strong">
-              <div class="chip-val" data-count="50" data-suffix="+">0+</div>
-              <div class="chip-lbl">AI Tools Covered</div>
-            </div>
-          </div>
+      <div class="hero-visual reveal delay-2">
+        <div class="hero-img-wrap">
+          <img src="./NirmalpicNew2.jpeg" alt="Nirmal — Founder, Learn AI Today" class="hero-img" loading="eager">
+        </div>
+        <div class="hero-float hero-float-tl">
+          <div class="float-num">20+</div>
+          <div class="float-label">Hours Saved / Week</div>
+        </div>
+        <div class="hero-float hero-float-br">
+          <div class="float-num">3x</div>
+          <div class="float-label">Faster Operations</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span class="scroll-text">Scroll</span>
-  </div>
 </section>
 
-<!-- ===== PROOF BAR ===== -->
-<div id="proof">
+<!-- ===== TRUST BAR ===== -->
+<div id="trust-bar">
   <div class="container">
-    <div class="proof-inner">
-      <div class="proof-item reveal delay-1">
-        <div class="proof-num"><span class="count" data-target="1000" data-suffix="+">0</span></div>
-        <div class="proof-lbl">Students Trained</div>
-      </div>
-      <div class="proof-item reveal delay-2">
-        <div class="proof-num"><span class="count" data-target="50" data-suffix="+">0</span></div>
-        <div class="proof-lbl">AI Tools Covered</div>
-      </div>
-      <div class="proof-item reveal delay-3">
-        <div class="proof-num"><span class="count" data-target="0">0</span></div>
-        <div class="proof-lbl">Tech Background Needed</div>
-      </div>
-      <div class="proof-item reveal delay-4">
-        <div class="proof-num"><span class="count" data-target="30" data-suffix=" days">0</span></div>
-        <div class="proof-lbl">To First Earning</div>
+    <div class="trust-bar-inner">
+      <div class="trust-bar-label">Powered by industry-leading AI</div>
+      <div class="trust-logos">
+        <span>OpenAI</span>
+        <span>Claude</span>
+        <span>Make.com</span>
+        <span>Zapier</span>
+        <span>LangChain</span>
+        <span>Python</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ===== PROBLEM ===== -->
-<section id="problem">
+<!-- ===== SERVICES ===== -->
+<section id="services">
   <div class="container">
     <div class="section-head reveal">
-      <div class="label" style="justify-content:center">The Problem</div>
-      <h2>You're watching AI take over.<br><span class="gold italic">You're not part of it yet.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
+      <div class="section-label">What We Do</div>
+      <h2>AI solutions that deliver<br>real business results.</h2>
+      <p>We don't just talk about AI — we build, deploy, and maintain custom solutions that save your business time and money from day one.</p>
     </div>
-    <div class="problem-grid">
-      <article class="problem-card glass reveal delay-1">
-        <div class="p-icon">⏩</div>
-        <h3>AI is moving too fast</h3>
-        <p>New tools drop every week. You've tried a few but never built a real system. You feel behind — and it's getting worse every day.</p>
+    <div class="services-grid">
+      <article class="service-card reveal delay-1">
+        <div class="s-icon">&#129302;</div>
+        <h3>Custom AI Agents</h3>
+        <p>Intelligent chatbots and AI assistants built for your specific business needs.</p>
+        <ul>
+          <li>Customer support automation</li>
+          <li>Sales & lead qualification bots</li>
+          <li>Internal knowledge assistants</li>
+          <li>WhatsApp & website integration</li>
+        </ul>
       </article>
-      <article class="problem-card glass reveal delay-2">
-        <div class="p-icon">💸</div>
-        <h3>Others are earning. You're not.</h3>
-        <p>You've seen people making real money with AI. But you don't have a clear path, a proven plan, or a system that actually works.</p>
+      <article class="service-card reveal delay-2">
+        <div class="s-icon">&#9889;</div>
+        <h3>Business Automation</h3>
+        <p>Eliminate repetitive tasks and streamline operations with AI-powered workflows.</p>
+        <ul>
+          <li>Email & communication automation</li>
+          <li>Data entry & reporting</li>
+          <li>Social media management</li>
+          <li>Invoice & document processing</li>
+        </ul>
       </article>
-      <article class="problem-card glass reveal delay-3">
-        <div class="p-icon">⌛</div>
-        <h3>Your time is being wasted</h3>
-        <p>You're still doing manually what AI could handle in seconds. Every hour you're not automating is an hour you're falling further behind.</p>
+      <article class="service-card reveal delay-3">
+        <div class="s-icon">&#127891;</div>
+        <h3>AI Training & Consulting</h3>
+        <p>Empower your team to use AI tools effectively with hands-on training programs.</p>
+        <ul>
+          <li>Team AI workshops (ChatGPT, Claude)</li>
+          <li>AI strategy consulting</li>
+          <li>Tool selection & implementation</li>
+          <li>Ongoing support & optimization</li>
+        </ul>
       </article>
     </div>
-    <div class="problem-callout glass reveal" style="margin-top:40px">
-      <p>The problem isn't that AI is too hard. <strong>It's that nobody showed you the right starting point.</strong></p>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <div class="section-label" style="text-align:center">How It Works</div>
+      <h2>From consultation to results<br>in four simple steps.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="step-card reveal delay-1">
+        <div class="step-num"><span class="step-num-inner">&#128172;</span></div>
+        <h3>Free Consultation</h3>
+        <p>We analyze your business, identify bottlenecks, and find where AI can make the biggest impact.</p>
+      </div>
+      <div class="step-card reveal delay-2">
+        <div class="step-num"><span class="step-num-inner">&#128221;</span></div>
+        <h3>Custom Proposal</h3>
+        <p>You get a clear plan with timelines, costs, and expected ROI — no hidden surprises.</p>
+      </div>
+      <div class="step-card reveal delay-3">
+        <div class="step-num"><span class="step-num-inner">&#128736;</span></div>
+        <h3>Build & Deploy</h3>
+        <p>We build your AI solution, test it thoroughly, and deploy it into your existing workflow.</p>
+      </div>
+      <div class="step-card reveal delay-4">
+        <div class="step-num"><span class="step-num-inner">&#128200;</span></div>
+        <h3>Optimize & Scale</h3>
+        <p>Ongoing support, monitoring, and improvements to ensure your AI keeps delivering results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section id="results">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:center">
+      <div class="section-label">The Impact</div>
+      <h2>What AI automation delivers<br>for businesses like yours.</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-item reveal delay-1">
+        <div class="result-num">20+</div>
+        <div class="result-label">Hours saved per week</div>
+      </div>
+      <div class="result-item reveal delay-2">
+        <div class="result-num">60%</div>
+        <div class="result-label">Reduction in manual tasks</div>
+      </div>
+      <div class="result-item reveal delay-3">
+        <div class="result-num">3x</div>
+        <div class="result-label">Faster response times</div>
+      </div>
+      <div class="result-item reveal delay-4">
+        <div class="result-num">24/7</div>
+        <div class="result-label">Always-on AI support</div>
+      </div>
     </div>
   </div>
 </section>
@@ -441,162 +430,110 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 <section id="about">
   <div class="container">
     <div class="about-grid">
-      <div class="about-photo-wrap reveal-left">
-        <div class="about-photo-glow"></div>
-        <img src="./NirmalpicNew2.jpeg" alt="Nirmal — AI Automation Expert" class="about-img" loading="lazy">
-        <div class="about-badge">AI Automation<br>Expert</div>
+      <div class="about-img-wrap reveal">
+        <img src="./NirmalpicNew2.jpeg" alt="Nirmal — Founder, Learn AI Today" class="about-img" loading="lazy">
+        <div class="about-badge">Founder & AI Consultant</div>
       </div>
-      <div class="reveal-right">
-        <div class="label">Your Guide</div>
-        <h2>Hi, I'm <span class="gold">Nirmal.</span></h2>
-        <div class="rule"></div>
-        <p class="about-body">I've spent years learning, testing, and implementing AI automation in real businesses and income streams. I know exactly what works — and what wastes your time.</p>
-        <p class="about-body">My mission is simple: give you the <strong style="color:var(--text)">practical, no-fluff systems</strong> to start automating your work and earning with AI — whether you're a complete beginner or want to add AI income on the side of your current work.</p>
-        <div class="chips">
-          <span class="chip">AI Automation Expert</span>
-          <span class="chip">Practical Systems</span>
-          <span class="chip">Real Results</span>
-          <span class="chip">Step-by-Step</span>
-          <span class="chip">No Fluff</span>
+      <div class="about-content reveal delay-2">
+        <div class="section-label">About</div>
+        <h2>Hi, I'm Nirmal.</h2>
+        <p class="about-body">I'm the founder of <strong>Learn AI Today</strong> — an AI solutions company that helps businesses automate operations, build custom AI agents, and train their teams to work smarter with artificial intelligence.</p>
+        <p class="about-body">With hands-on experience in AI development, automation engineering, and business process optimization, I work directly with business owners to identify where AI can save them the most time and money — then I build and deploy those solutions.</p>
+        <p class="about-body">My approach is simple: <strong>understand your business first, then apply the right AI.</strong> No unnecessary complexity. No buzzwords. Just results.</p>
+        <div class="skills-grid">
+          <span class="skill-tag">AI Agent Development</span>
+          <span class="skill-tag">Workflow Automation</span>
+          <span class="skill-tag">Python & APIs</span>
+          <span class="skill-tag">ChatGPT & Claude</span>
+          <span class="skill-tag">Make.com & Zapier</span>
+          <span class="skill-tag">Business Strategy</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section id="how">
+<!-- ===== USE CASES ===== -->
+<section id="usecases">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="label" style="justify-content:center">How It Works</div>
-      <h2>Three steps to your<br><span class="gold italic">first AI income.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
+    <div class="section-head reveal" style="text-align:center">
+      <div class="section-label" style="text-align:center">Use Cases</div>
+      <h2>AI automation works for<br>every type of business.</h2>
     </div>
-    <div class="how-grid">
-      <div class="how-card glass reveal delay-1">
-        <div class="how-num">01</div>
-        <h3>Get the Free Guide</h3>
-        <p>Enter your email and instantly receive the AI Automation Starter Guide — the exact first moves that get results fast.</p>
+    <div class="usecases-grid">
+      <div class="usecase-card reveal delay-1">
+        <div class="uc-icon">&#127970;</div>
+        <div>
+          <h3>Real Estate</h3>
+          <p>Automate lead follow-ups, property matching, and client communication with AI agents that work 24/7.</p>
+        </div>
       </div>
-      <div class="how-card glass reveal delay-2">
-        <div class="how-num">02</div>
-        <h3>Follow the System</h3>
-        <p>Step-by-step lessons, tools, and templates. No guessing. No overwhelm. Just a clear path from zero to earning.</p>
+      <div class="usecase-card reveal delay-2">
+        <div class="uc-icon">&#128722;</div>
+        <div>
+          <h3>E-Commerce</h3>
+          <p>AI-powered customer support, inventory alerts, order processing, and personalized marketing at scale.</p>
+        </div>
       </div>
-      <div class="how-card glass reveal delay-3">
-        <div class="how-num">03</div>
-        <h3>Earn with AI</h3>
-        <p>Deploy your first automation or service within 30 days. Start building income while others are still just watching.</p>
+      <div class="usecase-card reveal delay-1">
+        <div class="uc-icon">&#127973;</div>
+        <div>
+          <h3>Healthcare & Clinics</h3>
+          <p>Appointment scheduling, patient follow-ups, document processing, and FAQ bots for your practice.</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FEATURES ===== -->
-<section id="features" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-  <div class="container">
-    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
-      <div class="label" style="justify-content:center">What You Learn</div>
-      <h2>The complete AI income system<br><span class="gold italic">— from zero.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
-    </div>
-    <div class="features-grid">
-      <article class="feature-card glass tilt reveal delay-1">
-        <div class="f-num">01</div>
-        <div class="f-icon">🤖</div>
-        <h3>AI Tools Mastery</h3>
-        <p>Learn the 50+ AI tools that actually save time and make money — ChatGPT, Claude, Make, Zapier, Midjourney, ElevenLabs and more.</p>
-      </article>
-      <article class="feature-card glass tilt reveal delay-2">
-        <div class="f-num">02</div>
-        <div class="f-icon">💰</div>
-        <h3>Earn with AI</h3>
-        <p>5+ income paths: AI freelancing, consulting, digital products, content creation, and automation-as-a-service — all proven.</p>
-      </article>
-      <article class="feature-card glass tilt reveal delay-3">
-        <div class="f-num">03</div>
-        <div class="f-icon">⚡</div>
-        <h3>No-Code Automation</h3>
-        <p>Build powerful workflows that run 24/7 without writing a single line of code. Automate your business, content, and life.</p>
-      </article>
-      <article class="feature-card glass tilt reveal delay-1">
-        <div class="f-num">04</div>
-        <div class="f-icon">📣</div>
-        <h3>Content &amp; Marketing AI</h3>
-        <p>Generate weeks of content in hours. AI systems for writing, video scripts, social media, email, and ads — at scale.</p>
-      </article>
-      <article class="feature-card glass tilt reveal delay-2">
-        <div class="f-num">05</div>
-        <div class="f-icon">📐</div>
-        <h3>AI Business Models</h3>
-        <p>Real business models built on AI that generate recurring income — not one-off gigs. Position yourself as the expert in your niche.</p>
-      </article>
-      <article class="feature-card glass tilt reveal delay-3">
-        <div class="f-num">06</div>
-        <div class="f-icon">🛠️</div>
-        <h3>Live Implementation</h3>
-        <p>No theory dumping. We build real projects together — live workflows, actual client deliverables, and real income from day one.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
-      <div class="label" style="justify-content:center">Real Results</div>
-      <h2>Students who took the leap<br><span class="gold italic">are already earning.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
-    </div>
-    <div class="t-grid">
-      <article class="t-card glass reveal delay-1">
-        <div class="stars">★★★★★</div>
-        <p class="t-text">"I had zero tech background. Nirmal broke everything down so simply that I built my first automation in week one. By month two I had my first client paying me for AI work."</p>
-        <div class="t-author"><div class="t-avatar">A</div><div><div class="t-name">Ahmed R.</div><div class="t-role">Freelancer → AI Consultant</div></div></div>
-      </article>
-      <article class="t-card glass reveal delay-2">
-        <div class="stars">★★★★★</div>
-        <p class="t-text">"I was spending 5 hours a day on tasks that now take 20 minutes. Nirmal's system changed everything. The income models he teaches? They actually work."</p>
-        <div class="t-author"><div class="t-avatar">S</div><div><div class="t-name">Sara K.</div><div class="t-role">Business Owner</div></div></div>
-      </article>
-      <article class="t-card glass reveal delay-3">
-        <div class="stars">★★★★★</div>
-        <p class="t-text">"I joined skeptical. Now I run 3 AI-powered services from my laptop. The no-code automation alone saved my agency. This is not hype — it's a real system."</p>
-        <div class="t-author"><div class="t-avatar">M</div><div><div class="t-name">Mohamed T.</div><div class="t-role">Agency Owner</div></div></div>
-      </article>
+      <div class="usecase-card reveal delay-2">
+        <div class="uc-icon">&#128188;</div>
+        <div>
+          <h3>Professional Services</h3>
+          <p>Automate proposals, invoicing, client onboarding, and reporting — so you focus on billable work.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal delay-1">
+        <div class="uc-icon">&#127979;</div>
+        <div>
+          <h3>Education & Coaching</h3>
+          <p>AI tutors, automated course delivery, student engagement bots, and content generation systems.</p>
+        </div>
+      </div>
+      <div class="usecase-card reveal delay-2">
+        <div class="uc-icon">&#128640;</div>
+        <div>
+          <h3>Startups & Agencies</h3>
+          <p>Build faster with AI — automate operations, generate content, and serve clients without growing headcount.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ===== FAQ ===== -->
-<section id="faq" style="background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<section id="faq">
   <div class="container">
-    <div class="section-head reveal" style="text-align:center;margin-bottom:60px">
-      <div class="label" style="justify-content:center">Common Questions</div>
-      <h2>Everything you want to know<br><span class="gold italic">before you start.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
+    <div class="section-head reveal" style="text-align:center;margin-bottom:48px">
+      <div class="section-label" style="text-align:center">FAQ</div>
+      <h2>Common questions from<br>business owners.</h2>
     </div>
     <div class="faq-wrap">
-      <div class="faq-item glass reveal delay-1">
-        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do I need a tech background to learn AI automation?</span><span class="faq-ico">+</span></button>
-        <div class="faq-body"><p class="faq-body-inner">No. Everything is taught step-by-step, assuming zero prior tech knowledge. If you can use a smartphone and browse the internet, you can learn this. Most students have no coding background whatsoever.</p></div>
+      <div class="faq-item reveal delay-1">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How much does AI automation cost?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Every business is different. We offer a free consultation to understand your needs, then provide a clear proposal with transparent pricing. Most projects start from a few hundred dollars, with ROI visible within the first month.</p></div>
       </div>
-      <div class="faq-item glass reveal delay-2">
-        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How fast can I start earning with AI?</span><span class="faq-ico">+</span></button>
-        <div class="faq-body"><p class="faq-body-inner">Many students land their first AI project within 30 days. The speed depends on how quickly you apply what you learn — the systems and templates are ready to deploy from day one.</p></div>
+      <div class="faq-item reveal delay-2">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How long does it take to build and deploy?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Simple automations can be live within 1-2 weeks. Custom AI agents typically take 2-4 weeks depending on complexity. We work in phases so you see progress every step of the way.</p></div>
       </div>
-      <div class="faq-item glass reveal delay-3">
-        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">What AI tools do you cover?</span><span class="faq-ico">+</span></button>
-        <div class="faq-body"><p class="faq-body-inner">50+ AI tools in practical, real-world use cases — ChatGPT, Claude, Make.com, Zapier, Midjourney, ElevenLabs, Notion AI and many more. We focus on tools that generate income, not just cool demos.</p></div>
+      <div class="faq-item reveal delay-1">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do I need technical knowledge to use the solutions?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">No. We build solutions that are simple to use with your existing tools and workflows. We also provide training for your team so everyone is comfortable using the AI systems we build.</p></div>
       </div>
-      <div class="faq-item glass reveal delay-1">
-        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Is this a course or 1-on-1 coaching?</span><span class="faq-ico">+</span></button>
-        <div class="faq-body"><p class="faq-body-inner">Both options are available. The free guide gives you a full taste. The full program includes structured video lessons, live Q&amp;A sessions, community access, and direct feedback from Nirmal on your work.</p></div>
+      <div class="faq-item reveal delay-2">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">What happens after deployment? Do you provide support?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Yes. We offer ongoing support and optimization packages. AI solutions improve over time, and we monitor performance, fix issues, and scale as your business grows.</p></div>
       </div>
-      <div class="faq-item glass reveal delay-2">
-        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">What if I don't see results?</span><span class="faq-ico">+</span></button>
-        <div class="faq-body"><p class="faq-body-inner">If you follow the system and don't see results within 60 days, we will work with you personally until you do. Your success is not optional — it's the whole point.</p></div>
+      <div class="faq-item reveal delay-1">
+        <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Can you work with my existing tools and software?</span><span class="faq-ico">+</span></button>
+        <div class="faq-body"><p class="faq-body-inner">Absolutely. We integrate with your current stack — CRMs, email platforms, WhatsApp, websites, spreadsheets, and more. The goal is to enhance what you already have, not replace it.</p></div>
       </div>
     </div>
   </div>
@@ -604,19 +541,17 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 
 <!-- ===== CTA ===== -->
 <section id="cta">
-  <div class="cta-glow-top"></div>
   <div class="container">
     <div class="cta-box reveal">
-      <div class="label" style="justify-content:center">Start Today</div>
-      <h2>Build your AI income.<br><span class="gold italic">The system is ready.</span></h2>
-      <div class="rule" style="margin:16px auto"></div>
-      <p class="sub">Get the free AI Automation Starter Guide — the exact first steps Nirmal's best students take to go from zero to earning with AI.</p>
-      <form class="cta-form" action="#" method="post">
-        <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
-        <input type="email" name="email" placeholder="Your best email address" required autocomplete="email">
-        <button type="submit" class="btn btn-primary btn-full" style="font-size:16px;padding:18px">Yes — Send Me the Free Guide →</button>
-        <p class="form-note">No spam. Just AI tactics that work. Unsubscribe anytime.</p>
-      </form>
+      <h2>Ready to automate<br>your business with AI?</h2>
+      <p class="cta-sub">Book a free 30-minute consultation. We'll analyze your business, identify automation opportunities, and show you exactly how AI can save you time and money.</p>
+      <div class="cta-actions">
+        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%20Nirmal%2C%20I%27d%20like%20to%20book%20a%20free%20AI%20consultation" class="btn-white" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </a>
+        <a href="#services" class="btn-ghost-white">Learn More</a>
+      </div>
     </div>
   </div>
 </section>
@@ -627,13 +562,17 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-brand">Nirmal<span>.</span></div>
+      <div class="footer-brand">
+        <div class="footer-brand-icon">AI</div>
+        Learn AI Today
+      </div>
       <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank">Contact</a></li>
       </ul>
-      <p class="footer-copy">&copy; 2026 Nirmal. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 Learn AI Today. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -642,102 +581,22 @@ footer{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);padd
 (function(){
 "use strict";
 
-/* ---- CURSOR ---- */
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'},{passive:true});
-(function animRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing)})();
-document.querySelectorAll('a,button,.tilt,.faq-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('hover');ring.classList.add('hover')});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('hover');ring.classList.remove('hover')});
-});
-// Hide cursor on touch
-window.addEventListener('touchstart',()=>{cur.style.display='none';ring.style.display='none'},{once:true});
-
-/* ---- PARTICLES ---- */
-const canvas=document.getElementById('canvas');
-const ctx=canvas.getContext('2d');
-let W,H,pts=[];
-function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
-resize();window.addEventListener('resize',resize,{passive:true});
-function Pt(){this.x=Math.random()*W;this.y=Math.random()*H;this.vx=(Math.random()-.5)*0.3;this.vy=(Math.random()-.5)*0.3;this.r=Math.random()*1.2+0.4}
-for(let i=0;i<28;i++)pts.push(new Pt());
-let lastT=0;
-function draw(t){
-  if(t-lastT<20){requestAnimationFrame(draw);return}lastT=t;
-  ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0||p.x>W)p.vx*=-1;
-    if(p.y<0||p.y>H)p.vy*=-1;
-    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(245,166,35,0.35)';ctx.fill();
-  });
-  for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){
-    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d2=dx*dx+dy*dy;
-    if(d2<10000){const d=Math.sqrt(d2);ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(245,166,35,${0.06*(1-d/100)})`;ctx.stroke()}
-  }}
-  requestAnimationFrame(draw);
-}
-requestAnimationFrame(draw);
-
-/* ---- NAV ---- */
+/* ---- NAV SCROLL ---- */
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+
+/* ---- NAV TOGGLE (MOBILE) ---- */
 function toggleNav(){
   const ul=nav.querySelector('.nav-links');
   ul.style.cssText=ul.style.display==='flex'?'':
-    'display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:rgba(5,5,5,0.97);padding:20px 28px;gap:22px;border-bottom:1px solid rgba(255,255,255,0.07)';
+    'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(255,255,255,0.98);padding:20px 24px;gap:20px;border-bottom:1px solid #E2E8F0;backdrop-filter:blur(12px)';
 }
 window.toggleNav=toggleNav;
 
 /* ---- SCROLL REVEAL ---- */
-const revOpts={threshold:0.12,rootMargin:'0px 0px -40px 0px'};
 const revObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target)}});
-},revOpts);
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>revObs.observe(el));
-
-/* ---- COUNTER ---- */
-function animCount(el){
-  const target=+(el.dataset.target||el.dataset.count||0);
-  const suffix=el.dataset.suffix||'';
-  if(target===0){el.textContent='0'+suffix;return}
-  let start=0;const dur=1600;const step=timestamp=>{
-    if(!start)start=timestamp;
-    const prog=Math.min((timestamp-start)/dur,1);
-    const ease=1-Math.pow(1-prog,3);
-    el.textContent=Math.floor(ease*target)+(prog>=1?suffix:'');
-    if(prog<1)requestAnimationFrame(step);
-  };requestAnimationFrame(step);
-}
-const countObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){animCount(e.target);countObs.unobserve(e.target)}});
-},{threshold:0.5});
-document.querySelectorAll('.count,[data-count]').forEach(el=>countObs.observe(el));
-
-/* ---- 3D TILT ---- */
-document.querySelectorAll('.tilt').forEach(card=>{
-  card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width-.5;
-    const y=(e.clientY-r.top)/r.height-.5;
-    card.style.transform=`perspective(700px) rotateX(${-y*8}deg) rotateY(${x*8}deg) translateZ(10px)`;
-  });
-  card.addEventListener('mouseleave',()=>{card.style.transform='perspective(700px) rotateX(0) rotateY(0) translateZ(0)'});
-});
-
-/* ---- 3D HERO PHOTO PARALLAX ---- */
-const p3d=document.getElementById('photo3d');
-if(p3d){
-  document.addEventListener('mousemove',e=>{
-    const cx=window.innerWidth/2,cy=window.innerHeight/2;
-    const x=(e.clientX-cx)/cx*.08;
-    const y=(e.clientY-cy)/cy*.08;
-    p3d.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*6}deg)`;
-  },{passive:true});
-}
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 
 /* ---- FAQ ---- */
 function faq(btn){
@@ -748,7 +607,19 @@ function faq(btn){
 }
 window.faq=faq;
 
+/* ---- SMOOTH SCROLL ---- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    // Close mobile nav
+    const ul=nav.querySelector('.nav-links');
+    if(ul.style.display==='flex')ul.style.cssText='';
+  });
+});
+
 })();
 </script>
+
 </body>
 </html>

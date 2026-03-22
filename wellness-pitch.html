@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn AI Today — Wellness Coaches Pitch</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Open Sans',sans-serif;background:#0F172A;color:#fff;overflow:hidden;height:100vh;width:100vw}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif}
+
+:root{
+  --primary:#0F172A;
+  --accent:#0369A1;
+  --accent-light:#0284c7;
+  --green:#059669;
+  --gold:#F59E0B;
+  --red:#EF4444;
+  --bg:#F8FAFC;
+  --card:#FFFFFF;
+  --text:#020617;
+  --text2:#64748B;
+  --border:#E2E8F0;
+}
+
+/* ===== SLIDE SYSTEM ===== */
+.slide{
+  display:none;
+  width:100vw;
+  height:100vh;
+  padding:60px 80px;
+  position:relative;
+  overflow:hidden;
+}
+.slide.active{display:flex}
+.slide-light{background:var(--bg);color:var(--text)}
+.slide-dark{background:linear-gradient(135deg,var(--primary) 0%,#1e3355 100%);color:#fff}
+.slide-accent{background:linear-gradient(135deg,var(--accent) 0%,#0284c7 100%);color:#fff}
+.slide-green{background:linear-gradient(135deg,#064e3b 0%,#065f46 100%);color:#fff}
+
+/* ===== NAVIGATION ===== */
+.nav-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);
+  padding:12px 32px;display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.nav-bar .brand{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:rgba(255,255,255,0.5)}
+.nav-bar .controls{display:flex;gap:8px;align-items:center}
+.nav-btn{
+  width:40px;height:40px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.05);color:#fff;font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all 0.2s;
+}
+.nav-btn:hover{background:rgba(255,255,255,0.15)}
+.slide-counter{font-size:13px;color:rgba(255,255,255,0.4);font-weight:600;min-width:60px;text-align:center}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);transition:width 0.3s ease;z-index:101}
+
+/* ===== COMMON ELEMENTS ===== */
+.slide-num{
+  position:absolute;top:32px;right:40px;
+  font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;opacity:0.3;
+}
+.eyebrow{
+  font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  margin-bottom:16px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:'';width:28px;height:2px;border-radius:2px}
+.slide-dark .eyebrow::before,.slide-accent .eyebrow::before,.slide-green .eyebrow::before{background:rgba(255,255,255,0.3)}
+.slide-light .eyebrow{color:var(--accent)}
+.slide-light .eyebrow::before{background:var(--accent)}
+.slide-dark .eyebrow{color:rgba(255,255,255,0.5)}
+
+.big-title{font-size:clamp(36px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.03em;margin-bottom:20px}
+.subtitle{font-size:18px;line-height:1.7;opacity:0.7;max-width:600px}
+.accent-text{color:var(--accent-light)}
+.slide-light .accent-text{color:var(--accent)}
+.gold-text{color:var(--gold)}
+.green-text{color:#34D399}
+.red-text{color:var(--red)}
+
+/* Grid layouts */
+.flex-center{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100%}
+.flex-left{display:flex;flex-direction:column;justify-content:center;height:100%}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;height:100%}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+
+/* Cards */
+.card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:32px 28px}
+.slide-light .card{background:var(--card);border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.card h3{font-size:20px;font-weight:700;margin-bottom:10px}
+.card p{font-size:15px;line-height:1.7;opacity:0.7}
+
+/* Metric */
+.metric-big{font-family:'Poppins',sans-serif;font-size:72px;font-weight:900;line-height:1;letter-spacing:-0.03em}
+.metric-label{font-size:16px;font-weight:500;opacity:0.5;margin-top:8px}
+
+/* List */
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.check-list li{font-size:16px;display:flex;align-items:flex-start;gap:12px;line-height:1.6}
+.check-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;width:24px;height:24px;background:rgba(5,150,105,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px}
+.slide-dark .check-list li::before{background:rgba(52,211,153,0.15);color:#34D399}
+
+/* Pricing table */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%}
+.price-card{
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;padding:36px 28px;text-align:center;transition:all 0.3s;position:relative;
+}
+.price-card.popular{border-color:var(--gold);background:rgba(245,158,11,0.08)}
+.price-card.popular::before{
+  content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:var(--primary);font-family:'Poppins',sans-serif;
+  font-size:11px;font-weight:800;letter-spacing:0.1em;padding:4px 16px;border-radius:100px;
+}
+.price-name{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.5;margin-bottom:12px}
+.price-amount{font-family:'Poppins',sans-serif;font-size:48px;font-weight:900;line-height:1;margin-bottom:4px}
+.price-period{font-size:14px;opacity:0.4;margin-bottom:24px}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:12px;text-align:left}
+.price-features li{font-size:14px;display:flex;align-items:center;gap:10px;opacity:0.8}
+.price-features .yes{color:#34D399}
+.price-features .no{color:rgba(255,255,255,0.2)}
+
+/* Before/After */
+.ba-container{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;width:100%}
+.ba-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:32px;text-align:center}
+.ba-label{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px}
+.ba-label.before{color:var(--red)}
+.ba-label.after{color:#34D399}
+.ba-img-placeholder{width:100%;height:280px;background:rgba(255,255,255,0.04);border:2px dashed rgba(255,255,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:14px;opacity:0.4;margin-bottom:16px}
+.ba-arrow{font-size:40px;color:var(--gold);opacity:0.6}
+.ba-points{list-style:none;text-align:left;display:flex;flex-direction:column;gap:8px}
+.ba-points li{font-size:14px;opacity:0.7;display:flex;align-items:center;gap:8px}
+
+/* Steps */
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;width:100%;position:relative}
+.steps-row::before{content:'';position:absolute;top:44px;left:calc(16.6% + 16px);right:calc(16.6% + 16px);height:2px;background:rgba(255,255,255,0.1);z-index:0}
+.step-item{text-align:center;position:relative;z-index:1}
+.step-num{
+  width:88px;height:88px;border-radius:50%;
+  background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Poppins',sans-serif;font-size:32px;font-weight:900;color:var(--accent-light);
+  margin:0 auto 20px;
+}
+.step-item h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.step-item p{font-size:14px;opacity:0.6;line-height:1.6;max-width:240px;margin:0 auto}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.anim{animation:fadeUp 0.6s ease forwards;opacity:0}
+.anim-d1{animation-delay:0.1s}.anim-d2{animation-delay:0.2s}.anim-d3{animation-delay:0.3s}
+.anim-d4{animation-delay:0.4s}.anim-d5{animation-delay:0.5s}.anim-d6{animation-delay:0.6s}
+
+/* CTA slide */
+.cta-whatsapp{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25D366;color:#fff;padding:18px 36px;border-radius:14px;
+  font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;
+  margin-top:32px;transition:all 0.2s;border:none;cursor:pointer;
+}
+.cta-whatsapp:hover{background:#22c55e;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+
+<!-- Progress bar -->
+<div class="progress" id="progress"></div>
+
+<!-- ============================== -->
+<!-- SLIDE 1: Title -->
+<!-- ============================== -->
+<div class="slide slide-dark active" data-slide="1">
+  <span class="slide-num">01 / 10</span>
+  <div class="flex-center" style="text-align:center">
+    <div class="eyebrow anim">Learn AI Today</div>
+    <h1 class="big-title anim anim-d1" style="max-width:800px">
+      Grow your wellness brand<br>
+      <span class="accent-text">without spending hours</span><br>
+      on social media.
+    </h1>
+    <p class="subtitle anim anim-d2" style="text-align:center;margin:0 auto">Professional Instagram & Facebook management, automated — so you can focus on your clients.</p>
+    <div style="margin-top:40px;display:flex;align-items:center;gap:16px" class="anim anim-d3">
+      <img src="./NirmalpicNew2.jpeg" alt="Nirmal" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.2)">
+      <div style="text-align:left">
+        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16px">Nirmal</div>
+        <div style="font-size:13px;opacity:0.5">Founder, Learn AI Today</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 2: The Problem -->
+<!-- ============================== -->
+<div class="slide slide-light" data-slide="2">
+  <span class="slide-num" style="color:var(--text2)">02 / 10</span>
+  <div class="flex-left">
+    <div class="eyebrow anim">The Problem</div>
+    <h2 class="big-title anim anim-d1" style="color:var(--primary);max-width:700px">
+      You know you should post.<br>
+      <span class="accent-text">But who has the time?</span>
+    </h2>
+    <div style="margin-top:40px" class="three-col">
+      <div class="card anim anim-d2">
+        <h3 style="color:var(--red);font-size:32px;margin-bottom:14px">&#128564;</h3>
+        <h3 style="color:var(--text)">No Time</h3>
+        <p style="color:var(--text2)">You're busy with clients, sessions, and workshops. Social media feels like a second job.</p>
+      </div>
+      <div class="card anim anim-d3">
+        <h3 style="color:var(--gold);font-size:32px;margin-bottom:14px">&#128148;</h3>
+        <h3 style="color:var(--text)">Inconsistent</h3>
+        <p style="color:var(--text2)">You post when you remember — once a week, once a month. The algorithm punishes you.</p>
+      </div>
+      <div class="card anim anim-d4">
+        <h3 style="color:var(--accent);font-size:32px;margin-bottom:14px">&#128100;</h3>
+        <h3 style="color:var(--text)">Others Are Winning</h3>
+        <p style="color:var(--text2)">Coaches with less skill than you are getting more clients — just because they show up online daily.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 3: The Truth -->
+<!-- ============================== -->
+<div class="slide slide-accent" data-slide="3">
+  <span class="slide-num">03 / 10</span>
+  <div class="flex-center" style="text-align:center">
+    <div class="eyebrow anim">The Truth</div>
+    <h2 class="big-title anim anim-d1" style="max-width:800px">
+      Posting more doesn't mean more reach.<br>
+      <span style="color:rgba(255,255,255,0.6)">Consistency + Quality does.</span>
+    </h2>
+    <p class="subtitle anim anim-d2" style="text-align:center;margin:0 auto;max-width:650px;font-size:20px">
+      One professional post every day at the right time will beat 3 random posts. That's exactly what we automate for you.
+    </p>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 4: Before / After (Maheshwar) -->
+<!-- ============================== -->
+<div class="slide slide-dark" data-slide="4">
+  <span class="slide-num">04 / 10</span>
+  <div class="flex-left">
+    <div class="eyebrow anim">Real Results</div>
+    <h2 class="big-title anim anim-d1" style="font-size:clamp(28px,3.5vw,42px);margin-bottom:40px">
+      Maheshwar's profile —<br><span class="gold-text">before & after one week.</span>
+    </h2>
+    <div class="ba-container anim anim-d2">
+      <div class="ba-card">
+        <div class="ba-label before">&#10060; Before</div>
+        <div class="ba-img-placeholder">[ Screenshot of old profile ]</div>
+        <ul class="ba-points">
+          <li><span class="red-text">&#10060;</span> Random / no posts</li>
+          <li><span class="red-text">&#10060;</span> Unprofessional profile</li>
+          <li><span class="red-text">&#10060;</span> No brand consistency</li>
+          <li><span class="red-text">&#10060;</span> Low impressions</li>
+        </ul>
+      </div>
+      <div class="ba-arrow">&#10132;</div>
+      <div class="ba-card" style="border-color:rgba(52,211,153,0.3)">
+        <div class="ba-label after">&#9989; After 1 Week</div>
+        <div class="ba-img-placeholder" style="border-color:rgba(52,211,153,0.3)">[ Screenshot of new profile ]</div>
+        <ul class="ba-points">
+          <li><span class="green-text">&#9989;</span> Daily professional posts</li>
+          <li><span class="green-text">&#9989;</span> Clean, branded profile</li>
+          <li><span class="green-text">&#9989;</span> Consistent design language</li>
+          <li><span class="green-text">&#9989;</span> Growing impressions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 5: What We Do -->
+<!-- ============================== -->
+<div class="slide slide-light" data-slide="5">
+  <span class="slide-num" style="color:var(--text2)">05 / 10</span>
+  <div class="flex-left">
+    <div class="eyebrow anim">What We Do</div>
+    <h2 class="big-title anim anim-d1" style="color:var(--primary);margin-bottom:48px">
+      Your social media,<br><span class="accent-text">completely handled.</span>
+    </h2>
+    <div class="three-col">
+      <div class="card anim anim-d2" style="text-align:center;padding:40px 28px">
+        <div style="font-size:40px;margin-bottom:16px">&#127912;</div>
+        <h3 style="color:var(--primary)">Profile Setup</h3>
+        <p style="color:var(--text2)">Professional DP, cover photo, bio optimization — your profile looks like a brand, not a hobby.</p>
+      </div>
+      <div class="card anim anim-d3" style="text-align:center;padding:40px 28px">
+        <div style="font-size:40px;margin-bottom:16px">&#128197;</div>
+        <h3 style="color:var(--primary)">30 Days Content</h3>
+        <p style="color:var(--text2)">Instagram carousels + Facebook posts — designed, branded, and ready. One post every single day.</p>
+      </div>
+      <div class="card anim anim-d4" style="text-align:center;padding:40px 28px">
+        <div style="font-size:40px;margin-bottom:16px">&#129302;</div>
+        <h3 style="color:var(--primary)">Auto-Posting</h3>
+        <p style="color:var(--text2)">Content goes live automatically at the best times. You don't touch anything — just focus on your clients.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 6: How It Works -->
+<!-- ============================== -->
+<div class="slide slide-dark" data-slide="6">
+  <span class="slide-num">06 / 10</span>
+  <div class="flex-left">
+    <div class="eyebrow anim">How It Works</div>
+    <h2 class="big-title anim anim-d1" style="font-size:clamp(28px,3.5vw,42px);margin-bottom:56px;text-align:center">
+      Three simple steps to<br><span class="accent-text">autopilot your brand.</span>
+    </h2>
+    <div class="steps-row anim anim-d2">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h3>We Set Up</h3>
+        <p>We clean up your profile, choose your brand colors, and create your custom design template.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h3>We Create</h3>
+        <p>30 days of branded content — carousels for IG, images for FB — all customized for your wellness niche.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h3>We Post</h3>
+        <p>Content goes live daily on autopilot. You get monthly reports. We handle everything.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 7: Pricing -->
+<!-- ============================== -->
+<div class="slide slide-dark" data-slide="7">
+  <span class="slide-num">07 / 10</span>
+  <div class="flex-left">
+    <div class="eyebrow anim">Plans & Pricing</div>
+    <h2 class="big-title anim anim-d1" style="font-size:clamp(28px,3.5vw,40px);margin-bottom:40px;text-align:center">
+      Simple plans.<br><span class="gold-text">Choose what fits you.</span>
+    </h2>
+    <div class="pricing-grid anim anim-d2">
+      <!-- Starter -->
+      <div class="price-card">
+        <div class="price-name">Starter</div>
+        <div class="price-amount">&#8377;3K</div>
+        <div class="price-period">per month</div>
+        <ul class="price-features">
+          <li><span class="yes">&#9989;</span> Profile setup (first month)</li>
+          <li><span class="yes">&#9989;</span> 30 IG carousels / month</li>
+          <li><span class="yes">&#9989;</span> 30 FB posts / month</li>
+          <li><span class="yes">&#9989;</span> Custom brand design</li>
+          <li><span class="no">&#10060;</span> Auto-posting (you upload)</li>
+          <li><span class="no">&#10060;</span> Video reels</li>
+          <li><span class="no">&#10060;</span> Meta ads</li>
+        </ul>
+      </div>
+      <!-- Growth -->
+      <div class="price-card popular">
+        <div class="price-name">Growth</div>
+        <div class="price-amount" style="color:var(--gold)">&#8377;5K</div>
+        <div class="price-period">per month</div>
+        <ul class="price-features">
+          <li><span class="yes">&#9989;</span> Profile setup (first month)</li>
+          <li><span class="yes">&#9989;</span> 30 IG carousels / month</li>
+          <li><span class="yes">&#9989;</span> 30 FB posts / month</li>
+          <li><span class="yes">&#9989;</span> Custom brand design</li>
+          <li><span class="yes">&#9989;</span> Auto-posting (hands-free)</li>
+          <li><span class="yes">&#9989;</span> Hashtag strategy</li>
+          <li><span class="yes">&#9989;</span> Monthly report</li>
+          <li><span class="no">&#10060;</span> Video reels</li>
+        </ul>
+      </div>
+      <!-- Premium -->
+      <div class="price-card">
+        <div class="price-name">Premium</div>
+        <div class="price-amount">&#8377;12K</div>
+        <div class="price-period">per month + ad spend</div>
+        <ul class="price-features">
+          <li><span class="yes">&#9989;</span> Everything in Growth</li>
+          <li><span class="yes">&#9989;</span> 4-8 video reels / month</li>
+          <li><span class="yes">&#9989;</span> Meta ad campaigns</li>
+          <li><span class="yes">&#9989;</span> Story content</li>
+          <li><span class="yes">&#9989;</span> Engagement strategy</li>
+          <li><span class="yes">&#9989;</span> Detailed analytics</li>
+          <li><span class="yes">&#9989;</span> Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 8: Why Us -->
+<!-- ============================== -->
+<div class="slide slide-light" data-slide="8">
+  <span class="slide-num" style="color:var(--text2)">08 / 10</span>
+  <div class="two-col">
+    <div>
+      <div class="eyebrow anim">Why Learn AI Today</div>
+      <h2 class="big-title anim anim-d1" style="color:var(--primary);font-size:clamp(28px,3.5vw,42px)">
+        Not just posts.<br>
+        <span class="accent-text">A system that works.</span>
+      </h2>
+      <p class="subtitle anim anim-d2" style="color:var(--text2);margin-top:16px">We use AI-powered tools to create, design, and schedule your content — giving you agency-level quality at a fraction of the cost.</p>
+    </div>
+    <div>
+      <ul class="check-list" style="gap:20px">
+        <li class="anim anim-d2" style="color:var(--text)">
+          <strong>AI-Powered Design</strong><br>
+          <span style="color:var(--text2);font-size:14px">Professional carousels and posts created using AI — fast, consistent, and on-brand.</span>
+        </li>
+        <li class="anim anim-d3" style="color:var(--text)">
+          <strong>Fully Automated Posting</strong><br>
+          <span style="color:var(--text2);font-size:14px">Your content goes live at optimal times — every day, without you lifting a finger.</span>
+        </li>
+        <li class="anim anim-d4" style="color:var(--text)">
+          <strong>Custom for Wellness</strong><br>
+          <span style="color:var(--text2);font-size:14px">We understand the health & wellness space. Your content speaks to YOUR audience.</span>
+        </li>
+        <li class="anim anim-d5" style="color:var(--text)">
+          <strong>Affordable & Transparent</strong><br>
+          <span style="color:var(--text2);font-size:14px">No hidden fees, no contracts. Start at &#8377;3,000/month and scale when ready.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 9: Special Offer -->
+<!-- ============================== -->
+<div class="slide slide-green" data-slide="9">
+  <span class="slide-num">09 / 10</span>
+  <div class="flex-center" style="text-align:center">
+    <div class="eyebrow anim" style="color:rgba(255,255,255,0.5)">Limited Offer</div>
+    <h2 class="big-title anim anim-d1" style="max-width:750px">
+      Free profile audit<br>
+      for everyone on this call.
+    </h2>
+    <p class="subtitle anim anim-d2" style="text-align:center;margin:0 auto;max-width:600px;font-size:19px">
+      I'll review your current Instagram &amp; Facebook, tell you exactly what to fix, and show you a sample of what your branded content would look like — completely free.
+    </p>
+    <div style="margin-top:48px;background:rgba(0,0,0,0.2);border-radius:16px;padding:28px 40px;display:inline-flex;align-items:center;gap:40px" class="anim anim-d3">
+      <div style="text-align:center">
+        <div style="font-family:'Poppins',sans-serif;font-size:48px;font-weight:900;color:#FDE68A">10</div>
+        <div style="font-size:13px;opacity:0.6">Free audits available</div>
+      </div>
+      <div style="width:1px;height:60px;background:rgba(255,255,255,0.15)"></div>
+      <div style="text-align:left">
+        <div style="font-size:16px;font-weight:600;margin-bottom:4px">First come, first served</div>
+        <div style="font-size:14px;opacity:0.6">Message me on WhatsApp today</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== -->
+<!-- SLIDE 10: CTA / Contact -->
+<!-- ============================== -->
+<div class="slide slide-dark" data-slide="10">
+  <span class="slide-num">10 / 10</span>
+  <div class="flex-center" style="text-align:center">
+    <div class="eyebrow anim">Let's Get Started</div>
+    <h2 class="big-title anim anim-d1" style="max-width:700px">
+      Your clients need you.<br>
+      <span class="accent-text">Let us handle your content.</span>
+    </h2>
+    <p class="subtitle anim anim-d2" style="text-align:center;margin:0 auto;max-width:550px;font-size:18px">
+      Message me on WhatsApp for your free profile audit. Let's make your brand look as good as your work.
+    </p>
+    <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%27m%20from%20Maheshwar%27s%20wellness%20group.%20I%27d%20like%20a%20free%20profile%20audit!" class="cta-whatsapp anim anim-d3" target="_blank">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Chat on WhatsApp — 9710508886
+    </a>
+    <div style="margin-top:40px;display:flex;align-items:center;gap:16px" class="anim anim-d4">
+      <img src="./NirmalpicNew2.jpeg" alt="Nirmal" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.2)">
+      <div style="text-align:left">
+        <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:15px">Nirmal</div>
+        <div style="font-size:13px;opacity:0.4">Founder, Learn AI Today</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BOTTOM NAV ===== -->
+<div class="nav-bar">
+  <div class="brand">Learn AI Today</div>
+  <div class="controls">
+    <button class="nav-btn" onclick="prevSlide()">&#8592;</button>
+    <span class="slide-counter" id="counter">1 / 10</span>
+    <button class="nav-btn" onclick="nextSlide()">&#8594;</button>
+  </div>
+</div>
+
+<script>
+(function(){
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+let current=0;
+
+function show(i){
+  slides.forEach(s=>s.classList.remove('active'));
+  slides[i].classList.add('active');
+  document.getElementById('counter').textContent=(i+1)+' / '+total;
+  document.getElementById('progress').style.width=((i+1)/total*100)+'%';
+  // Reset animations
+  slides[i].querySelectorAll('.anim').forEach(el=>{
+    el.style.animation='none';
+    el.offsetHeight;
+    el.style.animation='';
+  });
+}
+
+window.nextSlide=function(){if(current<total-1){current++;show(current)}};
+window.prevSlide=function(){if(current>0){current--;show(current)}};
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='Enter'){e.preventDefault();nextSlide()}
+  if(e.key==='ArrowLeft'||e.key==='Backspace'){e.preventDefault();prevSlide()}
+});
+
+// Touch support
+let touchX=0;
+document.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX},{passive:true});
+document.addEventListener('touchend',e=>{
+  const diff=e.changedTouches[0].clientX-touchX;
+  if(diff<-50)nextSlide();
+  if(diff>50)prevSlide();
+},{passive:true});
+
+show(0);
+})();
+</script>
+
+</body>
+</html>

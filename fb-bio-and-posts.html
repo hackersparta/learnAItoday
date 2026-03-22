@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FB Bio & Pinned Posts — Learn AI Today</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F1F5F9;font-family:'Open Sans',sans-serif;color:#020617;padding:40px 20px;line-height:1.6}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif}
+
+.container{max-width:900px;margin:0 auto}
+
+.section{margin-bottom:48px}
+.section-label{
+  font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;color:#0369A1;
+  margin-bottom:8px;display:flex;align-items:center;gap:8px;
+}
+.section-label::before{content:'';width:24px;height:2px;background:#0369A1;border-radius:2px}
+.section-title{font-size:24px;font-weight:800;color:#0F172A;margin-bottom:20px}
+
+/* Bio section */
+.bio-card{
+  background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:32px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.bio-field{margin-bottom:20px}
+.bio-field:last-child{margin-bottom:0}
+.bio-field-label{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
+.bio-field-value{font-size:15px;color:#334155;line-height:1.7;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:14px 18px;position:relative}
+.bio-field-value::after{
+  content:'Click to copy';position:absolute;top:8px;right:12px;
+  font-size:10px;font-weight:600;color:#0369A1;background:rgba(3,105,161,0.08);
+  padding:3px 10px;border-radius:100px;cursor:pointer;opacity:0.6;
+}
+.bio-field-value:hover::after{opacity:1}
+.bio-note{font-size:12px;color:#94A3B8;margin-top:6px;font-style:italic}
+
+/* Post designs */
+.posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* FB Post card (1080x1080) scaled */
+.fb-post{
+  width:100%;aspect-ratio:1;
+  border-radius:14px;overflow:hidden;position:relative;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+}
+.fb-post-label{
+  text-align:center;font-size:12px;color:#64748B;font-weight:600;margin-top:10px;
+}
+
+/* Post 1: Services Overview */
+.post-services{
+  background:linear-gradient(135deg,#0F172A 0%,#1B2E5A 100%);
+  color:#fff;padding:40px 32px;display:flex;flex-direction:column;justify-content:space-between;
+}
+.post-services .post-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7DD3FC;margin-bottom:auto}
+.post-services .post-title{font-family:'Poppins',sans-serif;font-size:22px;font-weight:900;line-height:1.15;letter-spacing:-0.02em;margin-bottom:24px}
+.post-services .service-items{display:flex;flex-direction:column;gap:12px}
+.post-services .s-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:10px 14px}
+.post-services .s-item-icon{font-size:20px}
+.post-services .s-item-text{font-size:13px;font-weight:600;color:rgba(255,255,255,0.85)}
+.post-services .post-brand{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:20px}
+.post-services .post-brand-mark{width:28px;height:28px;background:linear-gradient(135deg,#0369A1,#0284c7);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff}
+.post-services .post-brand-name{font-size:12px;font-weight:700;color:rgba(255,255,255,0.5)}
+
+/* Post 2: Stats / Results */
+.post-stats{
+  background:linear-gradient(135deg,#0369A1 0%,#0284c7 100%);
+  color:#fff;padding:40px 32px;display:flex;flex-direction:column;justify-content:space-between;
+}
+.post-stats .post-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
+.post-stats .post-title{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;line-height:1.15;margin:12px 0 28px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+.stat-box{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.15);border-radius:12px;padding:16px;text-align:center}
+.stat-num{font-family:'Poppins',sans-serif;font-size:30px;font-weight:900;line-height:1}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.6);margin-top:4px}
+.post-stats .post-brand{display:flex;align-items:center;gap:8px;margin-top:16px}
+.post-stats .post-brand-mark{width:28px;height:28px;background:rgba(255,255,255,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff}
+.post-stats .post-brand-name{font-size:12px;font-weight:700;color:rgba(255,255,255,0.5)}
+
+/* Post 3: CTA / Book */
+.post-cta{
+  background:#0F172A;
+  color:#fff;padding:40px 32px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  position:relative;overflow:hidden;
+}
+.post-cta .glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(3,105,161,0.2),transparent 60%);top:-100px;right:-80px}
+.post-cta .glow2{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(5,150,105,0.12),transparent 60%);bottom:-80px;left:-40px}
+.post-cta-content{position:relative;z-index:2}
+.post-cta .post-eyebrow{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7DD3FC;margin-bottom:16px}
+.post-cta .post-title{font-family:'Poppins',sans-serif;font-size:24px;font-weight:900;line-height:1.15;letter-spacing:-0.02em;margin-bottom:12px}
+.post-cta .post-desc{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:28px;max-width:240px}
+.post-cta .cta-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#25D366;color:#fff;padding:14px 28px;border-radius:12px;
+  font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;
+}
+.post-cta .cta-number{font-size:13px;color:rgba(255,255,255,0.4);margin-top:12px}
+.post-cta .post-brand{display:flex;align-items:center;gap:8px;margin-top:24px}
+.post-cta .post-brand-mark{width:28px;height:28px;background:linear-gradient(135deg,#0369A1,#0284c7);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900;color:#fff}
+.post-cta .post-brand-name{font-size:12px;font-weight:700;color:rgba(255,255,255,0.4)}
+
+/* Caption boxes */
+.caption-card{
+  background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:20px;
+  margin-top:12px;
+}
+.caption-label{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:#0369A1;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px}
+.caption-text{font-size:13px;color:#334155;line-height:1.7;white-space:pre-line}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- ===== BIO / ABOUT SECTION ===== -->
+<div class="section">
+  <div class="section-label">Step 1: Update Page Info</div>
+  <h2 class="section-title">Facebook Page Bio & About</h2>
+  <p style="color:#64748B;font-size:14px;margin-bottom:24px">Copy-paste these into your Facebook Page settings. Go to Page Settings → Page Info.</p>
+
+  <div class="bio-card">
+    <div class="bio-field">
+      <div class="bio-field-label">Page Name</div>
+      <div class="bio-field-value">Learn AI Today</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Category</div>
+      <div class="bio-field-value">Consulting Agency · Information Technology Company · Business Service</div>
+      <div class="bio-note">Select all 3 categories — Facebook allows up to 3</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Short Description (155 characters)</div>
+      <div class="bio-field-value">We help businesses save 20+ hours/week with custom AI agents, workflow automation & AI training. Book a free AI audit today.</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">About / Long Description</div>
+      <div class="bio-field-value">Learn AI Today is an AI automation company founded by Nirmal.
+
+We build custom AI solutions for businesses:
+
+🤖 Custom AI Agents — Chatbots, customer support bots, sales assistants, WhatsApp integrations
+⚡ Business Automation — Email flows, data entry, social media posting, invoice processing
+🎓 AI Training — Team workshops on ChatGPT, Claude, and AI tools for your business
+
+Our clients save 20+ hours every week by replacing repetitive manual work with intelligent automation.
+
+Industries we serve: Healthcare, Real Estate, E-Commerce, Professional Services, Education, Startups & Agencies.
+
+📞 Book a free AI audit: wa.me/919710508886
+🌐 Website: learn-ai-today.vercel.app</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Website</div>
+      <div class="bio-field-value">https://learn-ai-today.vercel.app</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Phone / WhatsApp</div>
+      <div class="bio-field-value">+91 97105 08886</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Action Button</div>
+      <div class="bio-field-value">Set to "Send WhatsApp Message" → Link: https://wa.me/919710508886</div>
+      <div class="bio-note">Go to Page → Add Action Button → Send WhatsApp Message</div>
+    </div>
+
+    <div class="bio-field">
+      <div class="bio-field-label">Services (Add These as Facebook Services)</div>
+      <div class="bio-field-value">1. Custom AI Agent Development — Starting from ₹15,000
+2. Business Workflow Automation — Starting from ₹10,000
+3. AI Team Training Workshop — Starting from ₹8,000
+4. Social Media Automation — Starting from ₹5,000/month
+5. Free AI Business Audit — Free</div>
+      <div class="bio-note">Go to Page → More → Services → Add Service for each</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PINNED POSTS ===== -->
+<div class="section">
+  <div class="section-label">Step 2: Create & Pin These 3 Posts</div>
+  <h2 class="section-title">Posts to Pin on Your Page</h2>
+  <p style="color:#64748B;font-size:14px;margin-bottom:24px">Screenshot each post design below (1:1 square), upload to Facebook with the caption, then pin the first one.</p>
+
+  <div class="posts-grid">
+    <!-- Post 1: Services -->
+    <div>
+      <div class="fb-post post-services">
+        <div class="post-eyebrow">What We Do</div>
+        <div class="post-title">AI automation<br>for your business.</div>
+        <div class="service-items">
+          <div class="s-item">
+            <span class="s-item-icon">&#129302;</span>
+            <span class="s-item-text">Custom AI Agents</span>
+          </div>
+          <div class="s-item">
+            <span class="s-item-icon">&#9889;</span>
+            <span class="s-item-text">Business Automation</span>
+          </div>
+          <div class="s-item">
+            <span class="s-item-icon">&#127891;</span>
+            <span class="s-item-text">AI Training & Workshops</span>
+          </div>
+          <div class="s-item">
+            <span class="s-item-icon">&#128241;</span>
+            <span class="s-item-text">Social Media Automation</span>
+          </div>
+        </div>
+        <div class="post-brand">
+          <div class="post-brand-mark">LAT</div>
+          <div class="post-brand-name">Learn AI Today</div>
+        </div>
+      </div>
+      <div class="fb-post-label">Post 1: Services Overview (PIN THIS)</div>
+      <div class="caption-card">
+        <div class="caption-label">Caption</div>
+        <div class="caption-text">Your business is still running on manual work?
+
+We build AI systems that do the heavy lifting — so you don't have to.
+
+Here's what we do:
+
+🤖 Custom AI Agents — chatbots, support bots, WhatsApp assistants
+⚡ Business Automation — emails, data, reports, invoicing on autopilot
+🎓 AI Training — teach your team to use AI tools like pros
+📱 Social Media — automated posting, branded content, zero effort
+
+Every business has tasks that AI can handle better, faster, and cheaper.
+
+📞 Book a free AI audit: wa.me/919710508886
+🌐 learn-ai-today.vercel.app
+
+#AIautomation #BusinessAutomation #CustomAI #LearnAIToday #AIforBusiness #WorkflowAutomation #AIConsulting</div>
+      </div>
+    </div>
+
+    <!-- Post 2: Stats -->
+    <div>
+      <div class="fb-post post-stats">
+        <div class="post-eyebrow">The Impact</div>
+        <div class="post-title">What AI automation<br>delivers for business.</div>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Hours saved / week</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">60%</div>
+            <div class="stat-label">Less manual work</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3x</div>
+            <div class="stat-label">Faster responses</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Always-on support</div>
+          </div>
+        </div>
+        <div class="post-brand">
+          <div class="post-brand-mark">LAT</div>
+          <div class="post-brand-name">Learn AI Today</div>
+        </div>
+      </div>
+      <div class="fb-post-label">Post 2: Results / Impact</div>
+      <div class="caption-card">
+        <div class="caption-label">Caption</div>
+        <div class="caption-text">Here's what happens when you automate your business with AI:
+
+✅ 20+ hours saved every week
+✅ 60% reduction in repetitive manual tasks
+✅ 3x faster customer response times
+✅ 24/7 AI support that never sleeps
+
+This isn't a prediction — this is what businesses experience when they stop doing everything manually and let AI handle the boring stuff.
+
+The question isn't IF you need AI automation. It's how many hours you're willing to keep wasting without it.
+
+📞 Free AI audit: wa.me/919710508886
+
+#AIResults #BusinessGrowth #Automation #SaveTime #LearnAIToday #AIforBusiness</div>
+      </div>
+    </div>
+
+    <!-- Post 3: CTA -->
+    <div>
+      <div class="fb-post post-cta">
+        <div class="glow"></div>
+        <div class="glow2"></div>
+        <div class="post-cta-content">
+          <div class="post-eyebrow">Free Consultation</div>
+          <div class="post-title">Ready to automate<br>your business?</div>
+          <div class="post-desc">Book a free 30-minute AI audit. We'll show you exactly where AI can save you time and money.</div>
+          <div class="cta-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </div>
+          <div class="cta-number">+91 97105 08886</div>
+          <div class="post-brand">
+            <div class="post-brand-mark">LAT</div>
+            <div class="post-brand-name">Learn AI Today</div>
+          </div>
+        </div>
+      </div>
+      <div class="fb-post-label">Post 3: CTA / Contact</div>
+      <div class="caption-card">
+        <div class="caption-label">Caption</div>
+        <div class="caption-text">Your competitors are already using AI. Are you?
+
+Book a free 30-minute AI audit — I'll personally review your business and show you:
+
+🔍 Where you're wasting time on manual tasks
+⚡ Which processes can be automated immediately
+💰 How much time and money you'll save
+
+No commitment. No sales pressure. Just honest insights.
+
+📞 Message me on WhatsApp: wa.me/919710508886
+🌐 learn-ai-today.vercel.app
+
+#FreeConsultation #AIAudit #BusinessAutomation #LearnAIToday #GrowWithAI</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CHECKLIST ===== -->
+<div class="section">
+  <div class="section-label">Checklist</div>
+  <h2 class="section-title">Complete FB Page Setup Checklist</h2>
+  <div class="bio-card">
+    <div style="display:flex;flex-direction:column;gap:14px;font-size:15px;color:#334155">
+      <div>☐ <strong>Upload Cover Photo</strong> — Screenshot from fb-cover.html</div>
+      <div>☐ <strong>Upload Profile Picture</strong> — Screenshot from fb-dp.html (Option A or B)</div>
+      <div>☐ <strong>Update Page Name</strong> — "Learn AI Today"</div>
+      <div>☐ <strong>Set Categories</strong> — Consulting Agency, IT Company, Business Service</div>
+      <div>☐ <strong>Update Short Description</strong> — Copy from above</div>
+      <div>☐ <strong>Update About / Long Description</strong> — Copy from above</div>
+      <div>☐ <strong>Add Website</strong> — learn-ai-today.vercel.app</div>
+      <div>☐ <strong>Add Phone</strong> — +91 97105 08886</div>
+      <div>☐ <strong>Set Action Button</strong> — "Send WhatsApp Message"</div>
+      <div>☐ <strong>Add Services</strong> — 5 services listed above</div>
+      <div>☐ <strong>Post & Pin</strong> — Upload 3 posts, pin the Services Overview one</div>
+      <div>☐ <strong>Verify</strong> — Open page in incognito, check everything looks professional</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

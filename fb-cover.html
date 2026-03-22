@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FB Cover Photo — Learn AI Today</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a2e;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:40px;font-family:'Poppins',sans-serif}
+
+.instructions{
+  position:fixed;top:20px;left:50%;transform:translateX(-50%);
+  background:rgba(0,0,0,0.8);color:#fff;padding:12px 24px;border-radius:10px;
+  font-size:13px;z-index:100;text-align:center;
+}
+.instructions strong{color:#F59E0B}
+
+/* ===== COVER PHOTO: 820 x 312 ===== */
+.cover{
+  width:820px;
+  height:312px;
+  background:linear-gradient(135deg,#0F172A 0%,#1B2E5A 40%,#0F172A 100%);
+  position:relative;
+  overflow:hidden;
+  border-radius:0;
+}
+
+/* Background elements */
+.cover .bg-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+.cover .bg-glow-1{
+  position:absolute;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(3,105,161,0.2),transparent 60%);
+  top:-200px;right:100px;
+}
+.cover .bg-glow-2{
+  position:absolute;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(5,150,105,0.1),transparent 60%);
+  bottom:-150px;left:50px;
+}
+.cover .bg-dots{
+  position:absolute;right:40px;top:50%;transform:translateY(-50%);
+  display:grid;grid-template-columns:repeat(6,1fr);gap:12px;opacity:0.15;
+}
+.cover .bg-dots span{width:4px;height:4px;border-radius:50%;background:#fff}
+
+/* Content */
+.cover-content{
+  position:relative;z-index:2;
+  display:flex;align-items:center;height:100%;
+  padding:0 60px;gap:40px;
+}
+
+/* Left: Text */
+.cover-text{flex:1}
+.cover-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(3,105,161,0.15);border:1px solid rgba(3,105,161,0.25);
+  border-radius:100px;padding:5px 14px;
+  font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:#7DD3FC;margin-bottom:14px;
+}
+.cover-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:#059669;box-shadow:0 0 6px rgba(5,150,105,0.5)}
+.cover-title{
+  font-size:32px;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.03em;
+  margin-bottom:10px;
+}
+.cover-title .accent{color:#38BDF8}
+.cover-sub{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;max-width:380px}
+
+/* Right: Services */
+.cover-services{display:flex;flex-direction:column;gap:10px}
+.cover-service{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;padding:12px 16px;min-width:240px;
+}
+.cover-service-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(3,105,161,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.cover-service-text{font-size:12px;font-weight:600;color:rgba(255,255,255,0.8)}
+.cover-service-desc{font-size:10px;color:rgba(255,255,255,0.35);margin-top:1px}
+
+/* Bottom bar */
+.cover-bottom{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(0,0,0,0.3);
+  padding:8px 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.cover-bottom-item{font-size:10px;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:6px}
+.cover-bottom-item strong{color:rgba(255,255,255,0.7);font-weight:700}
+
+/* Website badge */
+.cover-website{
+  position:absolute;top:16px;right:20px;z-index:3;
+  background:rgba(3,105,161,0.2);border:1px solid rgba(3,105,161,0.3);
+  border-radius:8px;padding:6px 14px;
+  font-size:11px;font-weight:700;color:#7DD3FC;
+  letter-spacing:0.02em;
+}
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <strong>FB Cover Photo (820x312)</strong> — Right-click → "Save image as" or take a screenshot of the box below
+</div>
+
+<div class="cover">
+  <!-- Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+  <div class="bg-dots">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Website badge -->
+  <div class="cover-website">&#127760; learn-ai-today.vercel.app</div>
+
+  <!-- Content -->
+  <div class="cover-content">
+    <div class="cover-text">
+      <div class="cover-eyebrow">
+        <span class="cover-eyebrow-dot"></span>
+        AI Automation for Business
+      </div>
+      <h1 class="cover-title">
+        We automate your<br>business with <span class="accent">AI.</span>
+      </h1>
+      <p class="cover-sub">Custom AI agents, workflow automation, and team training — saving businesses 20+ hours every week.</p>
+    </div>
+    <div class="cover-services">
+      <div class="cover-service">
+        <div class="cover-service-icon">&#129302;</div>
+        <div>
+          <div class="cover-service-text">Custom AI Agents</div>
+          <div class="cover-service-desc">Chatbots &amp; assistants for your business</div>
+        </div>
+      </div>
+      <div class="cover-service">
+        <div class="cover-service-icon">&#9889;</div>
+        <div>
+          <div class="cover-service-text">Business Automation</div>
+          <div class="cover-service-desc">Eliminate repetitive manual tasks</div>
+        </div>
+      </div>
+      <div class="cover-service">
+        <div class="cover-service-icon">&#127891;</div>
+        <div>
+          <div class="cover-service-text">AI Training</div>
+          <div class="cover-service-desc">Workshops for your team</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="cover-bottom">
+    <div class="cover-bottom-item">&#128222; <strong>WhatsApp:</strong> +91 97105 08886</div>
+    <div class="cover-bottom-item">&#127760; <strong>learn-ai-today.vercel.app</strong></div>
+    <div class="cover-bottom-item">&#128231; <strong>Free AI Audit</strong> — Book a consultation today</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn AI Today — AI Automation & Custom Solutions for Business</title>
-<meta name="description" content="We help businesses save 20+ hours per week with custom AI agents, workflow automation, and team training. Free consultation available.">
-<meta name="keywords" content="AI automation, custom AI agents, business automation, AI consulting, workflow automation, Learn AI Today, Nirmal">
+<title>Learn AI Today — Learn AI Automation & Start Earning</title>
+<meta name="description" content="Learn AI automation from scratch. Build chatbots, automate businesses, and start freelancing with AI skills. Free community + workshops by Nirmal Kumar.">
+<meta name="keywords" content="learn AI, AI automation course, AI freelancing, AI chatbots, n8n, make.com, AI workshop, Learn AI Today, Nirmal Kumar">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Learn AI Today — AI Automation for Business">
-<meta property="og:description" content="Custom AI agents, workflow automation, and AI training. Save 20+ hours per week.">
+<meta property="og:title" content="Learn AI Today — Learn AI Automation & Start Earning">
+<meta property="og:description" content="Learn AI automation from scratch. Build bots, automate businesses, and start your AI freelancing career.">
 <meta property="og:image" content="NirmalpicNew2.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +23,14 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif}
 
-/* ===================== DESIGN SYSTEM — B2B Service (UI Pro Max) ===================== */
+/* ===================== DESIGN SYSTEM ===================== */
 :root{
   --primary:#0F172A;
   --on-primary:#FFFFFF;
   --secondary:#334155;
   --on-secondary:#FFFFFF;
-  --accent:#0369A1;
+  --accent:#7C3AED;
+  --accent-light:#A78BFA;
   --on-accent:#FFFFFF;
   --background:#F8FAFC;
   --foreground:#020617;
@@ -38,12 +39,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif}
   --muted:#E8ECF1;
   --muted-foreground:#64748B;
   --border:#E2E8F0;
-  --destructive:#DC2626;
-  --ring:#0F172A;
   --trust-color:#1E40AF;
   --security-green:#059669;
   --metric-highlight:#F59E0B;
-  --badge-height:48px;
   --card-shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
   --card-shadow-lg:0 10px 40px rgba(0,0,0,0.08);
   --card-shadow-hover:0 20px 60px rgba(0,0,0,0.12);
@@ -67,10 +65,10 @@ h2.section-title{font-size:clamp(30px,4vw,44px);font-weight:800;line-height:1.1;
 
 /* ===================== BUTTONS ===================== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:'Poppins',sans-serif;font-weight:600;border-radius:10px;border:none;cursor:pointer;transition:all 0.25s ease;letter-spacing:0.01em;position:relative}
-.btn-primary{padding:15px 30px;font-size:15px;background:var(--accent);color:var(--on-accent);box-shadow:0 4px 14px rgba(3,105,161,0.25)}
-.btn-primary:hover{background:#02749b;transform:translateY(-2px);box-shadow:0 8px 28px rgba(3,105,161,0.35)}
+.btn-primary{padding:15px 30px;font-size:15px;background:var(--accent);color:var(--on-accent);box-shadow:0 4px 14px rgba(124,58,237,0.25)}
+.btn-primary:hover{background:#6D28D9;transform:translateY(-2px);box-shadow:0 8px 28px rgba(124,58,237,0.35)}
 .btn-outline{padding:15px 30px;font-size:15px;background:transparent;color:var(--primary);border:2px solid var(--border)}
-.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(3,105,161,0.04)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(124,58,237,0.04)}
 .btn-white{padding:16px 32px;font-size:16px;background:#fff;color:var(--primary);box-shadow:0 4px 14px rgba(0,0,0,0.12)}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.18)}
 .btn-ghost-white{padding:16px 32px;font-size:16px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.25)}
@@ -81,19 +79,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 nav.scrolled{box-shadow:0 1px 8px rgba(0,0,0,0.06)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:19px;font-weight:800;color:var(--primary);letter-spacing:-0.02em}
-.nav-logo-mark{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),#0284c7);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins',sans-serif;font-weight:900;font-size:13px;letter-spacing:-0.02em}
+.nav-logo-mark{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),#A78BFA);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins',sans-serif;font-weight:900;font-size:13px;letter-spacing:-0.02em}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{font-size:14px;font-weight:500;color:var(--muted-foreground);transition:color 0.2s}
 .nav-links a:hover{color:var(--accent)}
 .nav-cta{padding:10px 22px;background:var(--accent);color:#fff;font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;border-radius:8px;transition:all 0.2s;border:none;cursor:pointer}
-.nav-cta:hover{background:#02749b}
+.nav-cta:hover{background:#6D28D9}
 .nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;cursor:pointer}
 .nav-ham span{width:22px;height:2px;background:var(--primary);border-radius:2px;transition:all 0.3s;display:block}
 
 /* ===================== HERO ===================== */
-#hero{padding:150px 0 110px;background:linear-gradient(170deg,#EFF6FF 0%,#F0F9FF 40%,var(--background) 100%);overflow:hidden}
+#hero{padding:150px 0 110px;background:linear-gradient(170deg,#F5F3FF 0%,#EDE9FE 40%,var(--background) 100%);overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(3,105,161,0.08);border:1px solid rgba(3,105,161,0.15);border-radius:100px;padding:7px 18px 7px 12px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:24px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.15);border-radius:100px;padding:7px 18px 7px 12px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--accent);margin-bottom:24px}
 .hero-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--security-green);box-shadow:0 0 0 3px rgba(5,150,105,0.2)}
 h1{font-size:clamp(38px,5vw,58px);font-weight:900;line-height:1.06;letter-spacing:-0.035em;color:var(--primary);margin-bottom:22px}
 h1 .accent{color:var(--accent)}
@@ -114,7 +112,7 @@ h1 .accent{color:var(--accent)}
 @keyframes metricFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .metric-value{font-family:'Poppins',sans-serif;font-size:26px;font-weight:900;color:var(--accent);line-height:1}
 .metric-label{font-size:12px;color:var(--muted-foreground);font-weight:500;margin-top:4px}
-.hero-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(3,105,161,0.08),transparent 70%);top:-80px;right:-80px;pointer-events:none;z-index:0}
+.hero-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.08),transparent 70%);top:-80px;right:-80px;pointer-events:none;z-index:0}
 
 /* ===================== TRUST BAR ===================== */
 #trust-bar{padding:44px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--card)}
@@ -123,42 +121,42 @@ h1 .accent{color:var(--accent)}
 .trust-logo{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:var(--secondary);opacity:0.45;transition:opacity 0.3s;letter-spacing:-0.01em}
 .trust-logo:hover{opacity:0.8}
 
-/* ===================== SERVICES ===================== */
-#services{background:var(--card)}
+/* ===================== SERVICES / WHAT YOU LEARN ===================== */
+#learn{background:var(--card)}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .service-card{background:var(--background);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px 30px;transition:all 0.35s ease;position:relative;overflow:hidden}
-.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#0284c7);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--card-shadow-hover);border-color:rgba(3,105,161,0.2)}
+.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#A78BFA);transform:scaleX(0);transform-origin:left;transition:transform 0.35s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--card-shadow-hover);border-color:rgba(124,58,237,0.2)}
 .service-card:hover::after{transform:scaleX(1)}
-.s-icon{width:60px;height:60px;background:linear-gradient(135deg,rgba(3,105,161,0.1),rgba(3,105,161,0.04));border:1px solid rgba(3,105,161,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;transition:all 0.3s}
-.service-card:hover .s-icon{background:linear-gradient(135deg,rgba(3,105,161,0.15),rgba(3,105,161,0.06));border-color:rgba(3,105,161,0.25)}
+.s-icon{width:60px;height:60px;background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(124,58,237,0.04));border:1px solid rgba(124,58,237,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;transition:all 0.3s}
+.service-card:hover .s-icon{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(124,58,237,0.06));border-color:rgba(124,58,237,0.25)}
 .service-card h3{font-size:21px;font-weight:700;color:var(--primary);margin-bottom:12px}
 .service-card>p{font-size:15px;color:var(--muted-foreground);line-height:1.7;margin-bottom:20px}
 .service-list{list-style:none;display:flex;flex-direction:column;gap:10px}
 .service-list li{font-size:14px;color:var(--secondary);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
 .service-list li svg{flex-shrink:0;margin-top:3px;color:var(--security-green)}
 
-/* ===================== PROCESS ===================== */
-#process{background:var(--background)}
+/* ===================== PROCESS / LEARNING PATH ===================== */
+#path{background:var(--background)}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
 .process-grid::before{content:'';position:absolute;top:52px;left:calc(12.5% + 32px);right:calc(12.5% + 32px);height:2px;background:linear-gradient(90deg,var(--border),var(--accent),var(--border));z-index:0}
 .step{text-align:center;position:relative;z-index:1}
 .step-icon{width:104px;height:104px;border-radius:50%;background:var(--card);border:2px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 24px;transition:all 0.35s;box-shadow:var(--card-shadow)}
-.step:hover .step-icon{border-color:var(--accent);box-shadow:0 8px 30px rgba(3,105,161,0.12)}
+.step:hover .step-icon{border-color:var(--accent);box-shadow:0 8px 30px rgba(124,58,237,0.12)}
 .step-icon .num{font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase}
 .step-icon .icon{font-size:32px;line-height:1;margin-top:2px}
 .step h3{font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:var(--primary);margin-bottom:8px}
 .step p{font-size:14px;color:var(--muted-foreground);line-height:1.65;max-width:220px;margin:0 auto}
 
-/* ===================== RESULTS / METRICS ===================== */
-#results{background:linear-gradient(135deg,var(--primary) 0%,#1e3355 50%,#0c1e3a 100%);color:#fff;overflow:hidden;position:relative}
-#results::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(3,105,161,0.2),transparent 60%);top:-200px;right:-200px;pointer-events:none}
-#results::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(5,150,105,0.1),transparent 60%);bottom:-150px;left:-100px;pointer-events:none}
+/* ===================== COMMUNITY / SOCIAL PROOF ===================== */
+#community{background:linear-gradient(135deg,var(--primary) 0%,#2D1B69 50%,#1a0a3e 100%);color:#fff;overflow:hidden;position:relative}
+#community::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.2),transparent 60%);top:-200px;right:-200px;pointer-events:none}
+#community::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.1),transparent 60%);bottom:-150px;left:-100px;pointer-events:none}
 .results-content{position:relative;z-index:1}
-#results .section-eyebrow{color:rgba(255,255,255,0.5)}
-#results .section-eyebrow::before{background:rgba(255,255,255,0.3)}
-#results .section-title{color:#fff}
-#results .section-desc{color:rgba(255,255,255,0.6)}
+#community .section-eyebrow{color:rgba(255,255,255,0.5)}
+#community .section-eyebrow::before{background:rgba(255,255,255,0.3)}
+#community .section-title{color:#fff}
+#community .section-desc{color:rgba(255,255,255,0.6)}
 .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px}
 .metric-card{text-align:center;padding:32px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);transition:all 0.3s}
 .metric-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.15);transform:translateY(-4px)}
@@ -170,21 +168,21 @@ h1 .accent{color:var(--accent)}
 .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center}
 .about-img-wrap{position:relative;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--card-shadow-lg)}
 .about-img{width:100%;height:440px;object-fit:cover;object-position:top center}
-.about-role-badge{position:absolute;bottom:20px;left:20px;background:var(--accent);color:#fff;padding:10px 20px;border-radius:10px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(3,105,161,0.3)}
+.about-role-badge{position:absolute;bottom:20px;left:20px;background:var(--accent);color:#fff;padding:10px 20px;border-radius:10px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(124,58,237,0.3)}
 .about-body{font-size:16px;color:var(--muted-foreground);line-height:1.85;margin-bottom:16px}
 .about-body strong{color:var(--primary);font-weight:600}
 .skills-wrap{margin-top:28px}
 .skills-label{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-foreground);margin-bottom:12px}
 .skills-tags{display:flex;flex-wrap:wrap;gap:8px}
 .skill-tag{padding:7px 16px;background:var(--background);border:1px solid var(--border);border-radius:100px;font-size:13px;font-weight:600;color:var(--secondary);transition:all 0.2s}
-.skill-tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(3,105,161,0.04)}
+.skill-tag:hover{border-color:var(--accent);color:var(--accent);background:rgba(124,58,237,0.04)}
 
-/* ===================== USE CASES ===================== */
-#usecases{background:var(--background)}
+/* ===================== WHO IS THIS FOR ===================== */
+#who{background:var(--background)}
 .usecases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .uc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:30px 26px;transition:all 0.3s;display:flex;gap:18px}
-.uc-card:hover{box-shadow:var(--card-shadow-lg);border-color:rgba(3,105,161,0.2);transform:translateY(-4px)}
-.uc-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(3,105,161,0.1),rgba(3,105,161,0.03));border:1px solid rgba(3,105,161,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.uc-card:hover{box-shadow:var(--card-shadow-lg);border-color:rgba(124,58,237,0.2);transform:translateY(-4px)}
+.uc-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(124,58,237,0.03));border:1px solid rgba(124,58,237,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
 .uc-card h3{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:6px}
 .uc-card p{font-size:14px;color:var(--muted-foreground);line-height:1.65}
 
@@ -193,7 +191,7 @@ h1 .accent{color:var(--accent)}
 .faq-grid{display:grid;grid-template-columns:0.4fr 1fr;gap:64px;align-items:start}
 .faq-wrap{display:flex;flex-direction:column;gap:12px}
 .faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
-.faq-item.open{border-color:rgba(3,105,161,0.3);box-shadow:0 4px 16px rgba(3,105,161,0.06)}
+.faq-item.open{border-color:rgba(124,58,237,0.3);box-shadow:0 4px 16px rgba(124,58,237,0.06)}
 .faq-btn{width:100%;background:none;border:none;font-family:'Open Sans',sans-serif;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;cursor:pointer}
 .faq-q{font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:var(--primary)}
 .faq-ico{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--muted-foreground);transition:all 0.3s;flex-shrink:0}
@@ -203,8 +201,8 @@ h1 .accent{color:var(--accent)}
 .faq-item.open .faq-body{max-height:300px}
 
 /* ===================== CTA ===================== */
-#cta{background:linear-gradient(135deg,var(--primary) 0%,#1a2f50 100%);color:#fff;text-align:center;padding:90px 0;position:relative;overflow:hidden}
-#cta::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(3,105,161,0.15),transparent 60%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
+#cta{background:linear-gradient(135deg,#1a0a3e 0%,#2D1B69 50%,var(--primary) 100%);color:#fff;text-align:center;padding:90px 0;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.15),transparent 60%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
 .cta-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
 .cta-inner h2{font-size:clamp(28px,4vw,40px);font-weight:800;color:#fff;margin-bottom:18px;letter-spacing:-0.02em;line-height:1.1}
 .cta-desc{font-size:17px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:40px}
@@ -223,6 +221,13 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
 .footer-nav-col a:hover{color:#fff}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;flex-wrap:wrap;gap:12px}
 .footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
+
+/* ===================== SOCIAL LINKS ===================== */
+.social-links{display:flex;gap:12px;margin-top:16px}
+.social-link{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.social-link:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.social-link svg{width:18px;height:18px;fill:rgba(255,255,255,0.6)}
+.social-link:hover svg{fill:#fff}
 
 /* ===================== SCROLL REVEAL ===================== */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s cubic-bezier(.16,1,.3,1),transform 0.7s cubic-bezier(.16,1,.3,1)}
@@ -288,14 +293,14 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
       Learn AI Today
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#results">Results</a></li>
+      <li><a href="#learn">What You Learn</a></li>
+      <li><a href="#path">Learning Path</a></li>
+      <li><a href="#community">Community</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%27d%20like%20to%20discuss%20AI%20automation%20for%20my%20business" class="nav-cta" target="_blank">
-      Get Free Consultation &rarr;
+    <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%20want%20to%20join%20the%20Learn%20AI%20Today%20community!" class="nav-cta" target="_blank">
+      Join Free Community &rarr;
     </a>
     <button class="nav-ham" onclick="toggleNav()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -312,48 +317,47 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
       <div class="reveal">
         <div class="hero-eyebrow">
           <span class="hero-eyebrow-dot"></span>
-          AI Automation for Business
+          Learn AI. Build. Earn.
         </div>
         <h1>
-          We automate your<br>
-          business so you can<br>
-          <span class="accent">focus on growth.</span>
+          Learn AI automation<br>
+          and start <span class="accent">earning<br>with real skills.</span>
         </h1>
-        <p class="hero-desc">Custom AI agents, workflow automation, and hands-on AI training — built to save your team 20+ hours every week and cut operational costs.</p>
+        <p class="hero-desc">No coding background needed. Learn how to build AI chatbots, automate businesses, and start freelancing — with practical, hands-on training in Tamil &amp; English.</p>
         <div class="hero-actions">
-          <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%27d%20like%20a%20free%20AI%20audit%20for%20my%20business" class="btn btn-primary" target="_blank">
-            Book Free AI Audit
+          <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%20want%20to%20join%20the%20Learn%20AI%20Today%20community!" class="btn btn-primary" target="_blank">
+            Join Free Community
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#services" class="btn btn-outline">Our Services</a>
+          <a href="#learn" class="btn btn-outline">See What You'll Learn</a>
         </div>
         <div class="hero-proof">
           <span class="hero-proof-item">
             <span class="hero-proof-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Free initial audit
+            2,000+ community members
           </span>
           <span class="hero-proof-item">
             <span class="hero-proof-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-            Results in 2 weeks
+            100% beginner friendly
           </span>
           <span class="hero-proof-item">
             <span class="hero-proof-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-            No long-term contracts
+            Tamil + English
           </span>
         </div>
       </div>
       <div class="hero-visual reveal d2">
         <div class="hero-glow"></div>
         <div class="hero-img-frame">
-          <img src="./NirmalpicNew2.jpeg" alt="Nirmal — Founder, Learn AI Today" class="hero-img" loading="eager">
+          <img src="./NirmalpicNew2.jpeg" alt="Nirmal Kumar — Founder, Learn AI Today" class="hero-img" loading="eager">
         </div>
         <div class="hero-metric hero-metric-tl">
-          <div class="metric-value">20+</div>
-          <div class="metric-label">Hours Saved / Week</div>
+          <div class="metric-value">2K+</div>
+          <div class="metric-label">Community Members</div>
         </div>
         <div class="hero-metric hero-metric-br">
-          <div class="metric-value">3x</div>
-          <div class="metric-label">Faster Operations</div>
+          <div class="metric-value">Free</div>
+          <div class="metric-label">To Get Started</div>
         </div>
       </div>
     </div>
@@ -363,133 +367,133 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
 <!-- ===== TRUST BAR ===== -->
 <div id="trust-bar" class="reveal">
   <div class="container">
-    <div class="trust-bar-label">Built with industry-leading AI technology</div>
+    <div class="trust-bar-label">Tools you'll master</div>
     <div class="trust-logos">
-      <span class="trust-logo">OpenAI</span>
-      <span class="trust-logo">Anthropic Claude</span>
+      <span class="trust-logo">ChatGPT</span>
+      <span class="trust-logo">Claude AI</span>
+      <span class="trust-logo">n8n</span>
       <span class="trust-logo">Make.com</span>
-      <span class="trust-logo">Zapier</span>
-      <span class="trust-logo">LangChain</span>
+      <span class="trust-logo">WhatsApp API</span>
+      <span class="trust-logo">Meta Ads</span>
       <span class="trust-logo">Python</span>
-      <span class="trust-logo">Meta API</span>
     </div>
   </div>
 </div>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
+<!-- ===== WHAT YOU'LL LEARN ===== -->
+<section id="learn">
   <div class="container">
     <div class="section-head reveal" style="margin-bottom:56px">
-      <div class="section-eyebrow">Our Services</div>
-      <h2 class="section-title">AI solutions that deliver<br>measurable business results.</h2>
-      <p class="section-desc">We don't just consult — we build, deploy, and maintain AI systems that save your business real time and money from week one.</p>
+      <div class="section-eyebrow">What You'll Learn</div>
+      <h2 class="section-title">Real AI skills that<br>make you money.</h2>
+      <p class="section-desc">Not theory. Not hype. Practical, hands-on skills you can use to build automations for businesses and earn as a freelancer or start your own agency.</p>
     </div>
     <div class="services-grid">
       <article class="service-card reveal d1">
         <div class="s-icon">&#129302;</div>
-        <h3>Custom AI Agents</h3>
-        <p>Intelligent chatbots and AI assistants built specifically for your business workflows and customer needs.</p>
+        <h3>AI Chatbots &amp; Agents</h3>
+        <p>Build WhatsApp bots and AI assistants that talk to customers, capture leads, and book appointments — automatically.</p>
         <ul class="service-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Customer support automation</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Sales &amp; lead qualification bots</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Internal knowledge assistants</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp &amp; website integration</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp Business API bots</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>AI agents with memory</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Website chat integrations</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Multi-channel AI support</li>
         </ul>
       </article>
       <article class="service-card reveal d2">
         <div class="s-icon">&#9889;</div>
         <h3>Business Automation</h3>
-        <p>Eliminate repetitive manual tasks and streamline your entire operation with AI-powered workflows.</p>
+        <p>Learn to automate social media posting, email marketing, lead follow-ups, and entire business workflows using no-code tools.</p>
         <ul class="service-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Email &amp; communication flows</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Data entry &amp; reporting</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Social media management</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Invoice &amp; document processing</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>n8n &amp; Make.com workflows</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Social media auto-posting</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Lead generation pipelines</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Email &amp; CRM automation</li>
         </ul>
       </article>
       <article class="service-card reveal d3">
-        <div class="s-icon">&#127891;</div>
-        <h3>AI Training &amp; Consulting</h3>
-        <p>Empower your team to leverage AI tools effectively with practical, hands-on training programs.</p>
+        <div class="s-icon">&#128176;</div>
+        <h3>Freelancing &amp; Earning</h3>
+        <p>Turn your AI skills into income. Learn how to find clients, pitch your services, price your work, and build a freelance AI business.</p>
         <ul class="service-list">
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Team AI workshops</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>AI strategy consulting</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Tool selection &amp; implementation</li>
-          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Ongoing support &amp; optimization</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Client acquisition strategies</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Pricing &amp; packaging services</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Building your portfolio</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Scaling to an AI agency</li>
         </ul>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ===== PROCESS ===== -->
-<section id="process">
+<!-- ===== LEARNING PATH ===== -->
+<section id="path">
   <div class="container">
     <div class="section-head text-center reveal" style="margin-bottom:64px">
-      <div class="section-eyebrow" style="justify-content:center">How It Works</div>
-      <h2 class="section-title">From first call to results<br>in four clear steps.</h2>
+      <div class="section-eyebrow" style="justify-content:center">Your Learning Path</div>
+      <h2 class="section-title">From zero to earning<br>in four stages.</h2>
     </div>
     <div class="process-grid">
       <div class="step reveal d1">
         <div class="step-icon">
-          <span class="num">Step 01</span>
-          <span class="icon">&#128172;</span>
+          <span class="num">Stage 01</span>
+          <span class="icon">&#127891;</span>
         </div>
-        <h3>Free AI Audit</h3>
-        <p>We analyze your business, identify bottlenecks, and show where AI can make the biggest impact.</p>
+        <h3>Learn the Basics</h3>
+        <p>Understand AI tools — ChatGPT, Claude, and how automation works. No coding needed.</p>
       </div>
       <div class="step reveal d2">
         <div class="step-icon">
-          <span class="num">Step 02</span>
-          <span class="icon">&#128221;</span>
+          <span class="num">Stage 02</span>
+          <span class="icon">&#128736;&#65039;</span>
         </div>
-        <h3>Custom Proposal</h3>
-        <p>A clear plan with timelines, costs, and expected ROI. No hidden fees, no surprises.</p>
+        <h3>Build Real Projects</h3>
+        <p>Create chatbots, automate social media, build lead gen systems — with step-by-step guidance.</p>
       </div>
       <div class="step reveal d3">
         <div class="step-icon">
-          <span class="num">Step 03</span>
-          <span class="icon">&#128736;&#65039;</span>
+          <span class="num">Stage 03</span>
+          <span class="icon">&#128188;</span>
         </div>
-        <h3>Build &amp; Deploy</h3>
-        <p>We build your AI solution, test it thoroughly, and integrate it into your existing workflow.</p>
+        <h3>Get Your First Client</h3>
+        <p>Learn to pitch, price, and close your first automation deal with real businesses.</p>
       </div>
       <div class="step reveal d4">
         <div class="step-icon">
-          <span class="num">Step 04</span>
-          <span class="icon">&#128200;</span>
+          <span class="num">Stage 04</span>
+          <span class="icon">&#128640;</span>
         </div>
-        <h3>Optimize &amp; Scale</h3>
-        <p>Ongoing monitoring, improvements, and scaling to ensure your AI keeps delivering results.</p>
+        <h3>Scale &amp; Grow</h3>
+        <p>Build a portfolio, get referrals, and turn your skills into a full-time AI automation business.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== RESULTS ===== -->
-<section id="results">
+<!-- ===== COMMUNITY / SOCIAL PROOF ===== -->
+<section id="community">
   <div class="container results-content">
     <div class="section-head text-center reveal" style="margin-bottom:0">
-      <div class="section-eyebrow" style="justify-content:center">The Impact</div>
-      <h2 class="section-title">What AI automation delivers<br>for businesses like yours.</h2>
-      <p class="section-desc" style="margin-left:auto;margin-right:auto">These are the results businesses experience when they replace manual, repetitive work with intelligent automation.</p>
+      <div class="section-eyebrow" style="justify-content:center">The Community</div>
+      <h2 class="section-title">Join 2,000+ people<br>already learning AI.</h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto">A growing community of ambitious learners, side-hustlers, and future AI entrepreneurs — all learning and building together.</p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card reveal d1">
-        <div class="num">20+</div>
-        <div class="label">Hours saved per week</div>
+        <div class="num">2K+</div>
+        <div class="label">Facebook community</div>
       </div>
       <div class="metric-card reveal d2">
-        <div class="num">60%</div>
-        <div class="label">Reduction in manual tasks</div>
+        <div class="num">100+</div>
+        <div class="label">Videos &amp; tutorials</div>
       </div>
       <div class="metric-card reveal d3">
-        <div class="num">3x</div>
-        <div class="label">Faster response times</div>
+        <div class="num">Free</div>
+        <div class="label">Community access</div>
       </div>
       <div class="metric-card reveal d4">
-        <div class="num">24/7</div>
-        <div class="label">Always-on AI support</div>
+        <div class="num">Tamil</div>
+        <div class="label">&amp; English content</div>
       </div>
     </div>
   </div>
@@ -500,24 +504,24 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap reveal">
-        <img src="./NirmalpicNew2.jpeg" alt="Nirmal — Founder, Learn AI Today" class="about-img" loading="lazy">
-        <div class="about-role-badge">Founder &amp; AI Consultant</div>
+        <img src="./NirmalpicNew2.jpeg" alt="Nirmal Kumar — Founder, Learn AI Today" class="about-img" loading="lazy">
+        <div class="about-role-badge">Founder &amp; AI Automation Expert</div>
       </div>
       <div class="reveal d2">
-        <div class="section-eyebrow">About</div>
+        <div class="section-eyebrow">Your Mentor</div>
         <h2 class="section-title">Hi, I'm Nirmal.</h2>
-        <p class="about-body">I'm the founder of <strong>Learn AI Today</strong> — an AI solutions company that helps businesses automate their operations, build custom AI agents, and train their teams to work smarter with artificial intelligence.</p>
-        <p class="about-body">With deep expertise in AI development, automation engineering, and business process optimization, I work directly with business owners to identify where AI can save the most time and money — then I build and deploy those solutions.</p>
-        <p class="about-body">My approach is simple: <strong>understand your business first, then apply the right AI.</strong> No unnecessary complexity. No buzzwords. Just measurable results.</p>
+        <p class="about-body">I'm a <strong>full-stack developer and AI automation expert</strong> who builds real AI systems for real businesses. I've automated everything from social media content pipelines to WhatsApp customer bots to full marketing systems.</p>
+        <p class="about-body">I started <strong>Learn AI Today</strong> because I believe anyone can learn these skills — you don't need a CS degree or coding background. I teach the exact same tools and techniques I use with my paying clients at <strong>Catapult AI</strong>.</p>
+        <p class="about-body">My teaching style: <strong>practical, no-fluff, real-world projects.</strong> Everything I teach, I've built and deployed for actual businesses. You learn by doing, not by watching theory slides.</p>
         <div class="skills-wrap">
-          <div class="skills-label">Expertise</div>
+          <div class="skills-label">What I Teach</div>
           <div class="skills-tags">
-            <span class="skill-tag">AI Agent Development</span>
-            <span class="skill-tag">Workflow Automation</span>
-            <span class="skill-tag">Python &amp; APIs</span>
+            <span class="skill-tag">AI Chatbots</span>
+            <span class="skill-tag">n8n &amp; Make.com</span>
+            <span class="skill-tag">WhatsApp Bots</span>
             <span class="skill-tag">ChatGPT &amp; Claude</span>
-            <span class="skill-tag">Make.com &amp; Zapier</span>
-            <span class="skill-tag">Business Strategy</span>
+            <span class="skill-tag">Social Media Automation</span>
+            <span class="skill-tag">AI Freelancing</span>
             <span class="skill-tag">Meta &amp; YouTube APIs</span>
           </div>
         </div>
@@ -526,55 +530,55 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
   </div>
 </section>
 
-<!-- ===== USE CASES ===== -->
-<section id="usecases">
+<!-- ===== WHO IS THIS FOR ===== -->
+<section id="who">
   <div class="container">
     <div class="section-head text-center reveal" style="margin-bottom:56px">
-      <div class="section-eyebrow" style="justify-content:center">Use Cases</div>
-      <h2 class="section-title">AI automation works across<br>every industry.</h2>
-      <p class="section-desc" style="margin-left:auto;margin-right:auto">No matter your business type, there are repetitive tasks that AI can handle better, faster, and cheaper.</p>
+      <div class="section-eyebrow" style="justify-content:center">Who Is This For</div>
+      <h2 class="section-title">This is for you if<br>you want to...</h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto">Whether you're a student, working professional, or someone looking for a side income — AI automation is the skill of 2026.</p>
     </div>
     <div class="usecases-grid">
       <div class="uc-card reveal d1">
-        <div class="uc-icon">&#127970;</div>
+        <div class="uc-icon">&#128187;</div>
         <div>
-          <h3>Real Estate</h3>
-          <p>Automate lead follow-ups, property matching, and client communication with 24/7 AI agents.</p>
+          <h3>Start AI Freelancing</h3>
+          <p>Learn skills that businesses will pay you for — chatbots, automation, social media systems.</p>
         </div>
       </div>
       <div class="uc-card reveal d2">
-        <div class="uc-icon">&#128722;</div>
+        <div class="uc-icon">&#128176;</div>
         <div>
-          <h3>E-Commerce</h3>
-          <p>AI customer support, inventory alerts, order processing, and personalized marketing at scale.</p>
+          <h3>Build a Side Income</h3>
+          <p>Earn &#8377;20K-50K/month on the side by offering AI automation services to small businesses.</p>
         </div>
       </div>
       <div class="uc-card reveal d3">
-        <div class="uc-icon">&#127973;</div>
+        <div class="uc-icon">&#127979;</div>
         <div>
-          <h3>Healthcare &amp; Clinics</h3>
-          <p>Appointment scheduling, patient follow-ups, document processing, and instant FAQ bots.</p>
+          <h3>Learn Without Coding</h3>
+          <p>No programming needed. We use no-code and low-code tools that anyone can learn in weeks.</p>
         </div>
       </div>
       <div class="uc-card reveal d1">
-        <div class="uc-icon">&#128188;</div>
+        <div class="uc-icon">&#128640;</div>
         <div>
-          <h3>Professional Services</h3>
-          <p>Automate proposals, invoicing, client onboarding, and reporting so you focus on billable work.</p>
+          <h3>Start an AI Agency</h3>
+          <p>Build a full-fledged AI automation agency. Learn client acquisition, delivery, and scaling.</p>
         </div>
       </div>
       <div class="uc-card reveal d2">
-        <div class="uc-icon">&#127979;</div>
+        <div class="uc-icon">&#129489;&#8205;&#128187;</div>
         <div>
-          <h3>Education &amp; Coaching</h3>
-          <p>AI tutors, automated course delivery, student engagement bots, and content generation systems.</p>
+          <h3>Upgrade Your Career</h3>
+          <p>Add AI skills to your resume. Stand out in job interviews with practical automation knowledge.</p>
         </div>
       </div>
       <div class="uc-card reveal d3">
-        <div class="uc-icon">&#128640;</div>
+        <div class="uc-icon">&#127970;</div>
         <div>
-          <h3>Startups &amp; Agencies</h3>
-          <p>Build faster with AI — automate operations, generate content, and serve clients without growing headcount.</p>
+          <h3>Automate Your Own Business</h3>
+          <p>Already have a business? Learn to automate your marketing, leads, and customer follow-ups yourself.</p>
         </div>
       </div>
     </div>
@@ -587,29 +591,29 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
     <div class="faq-grid">
       <div class="reveal">
         <div class="section-eyebrow">FAQ</div>
-        <h2 class="section-title">Questions?<br>We've got answers.</h2>
-        <p class="section-desc" style="margin-top:16px">Everything business owners ask before getting started with AI automation.</p>
+        <h2 class="section-title">Got<br>questions?</h2>
+        <p class="section-desc" style="margin-top:16px">Everything you need to know before joining Learn AI Today.</p>
       </div>
       <div class="faq-wrap">
         <div class="faq-item reveal d1">
-          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How much does AI automation cost?</span><span class="faq-ico">+</span></button>
-          <div class="faq-body"><p class="faq-body-inner">Every business is different. We start with a free audit to understand your needs, then provide a transparent proposal. Most projects deliver ROI within the first month.</p></div>
+          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do I need coding skills to learn?</span><span class="faq-ico">+</span></button>
+          <div class="faq-body"><p class="faq-body-inner">Not at all. Most of what we teach uses no-code tools like n8n, Make.com, and ChatGPT. You'll learn by building real projects step-by-step. If you can use a smartphone, you can learn this.</p></div>
         </div>
         <div class="faq-item reveal d2">
-          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How long does it take to build and deploy?</span><span class="faq-ico">+</span></button>
-          <div class="faq-body"><p class="faq-body-inner">Simple automations go live in 1-2 weeks. Custom AI agents typically take 2-4 weeks depending on complexity. We work in phases so you see progress at every step.</p></div>
+          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Is the community really free?</span><span class="faq-ico">+</span></button>
+          <div class="faq-body"><p class="faq-body-inner">Yes! The Facebook community and basic content are completely free. We also offer premium workshops and courses for those who want deeper, guided learning with direct mentorship.</p></div>
         </div>
         <div class="faq-item reveal d3">
-          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do I need technical knowledge?</span><span class="faq-ico">+</span></button>
-          <div class="faq-body"><p class="faq-body-inner">No. We build solutions that integrate seamlessly with your existing tools and workflows. We also train your team so everyone is comfortable using the AI systems.</p></div>
+          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How much can I earn with these skills?</span><span class="faq-ico">+</span></button>
+          <div class="faq-body"><p class="faq-body-inner">AI automation freelancers typically charge &#8377;3,000-&#8377;75,000 per project depending on complexity. With consistent effort, earning &#8377;20K-50K/month on the side is realistic within 3-6 months of learning.</p></div>
         </div>
         <div class="faq-item reveal d4">
-          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Do you provide ongoing support?</span><span class="faq-ico">+</span></button>
-          <div class="faq-body"><p class="faq-body-inner">Yes. We offer ongoing support and optimization packages. AI systems improve over time, and we monitor, fix, and scale as your business grows.</p></div>
+          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Is the content in Tamil or English?</span><span class="faq-ico">+</span></button>
+          <div class="faq-body"><p class="faq-body-inner">Both! Most of our video content is in Tamil with English mixed in naturally (Tanglish). Written materials and tools are in English. You'll be comfortable either way.</p></div>
         </div>
         <div class="faq-item reveal d5">
-          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">Can you work with my existing tools?</span><span class="faq-ico">+</span></button>
-          <div class="faq-body"><p class="faq-body-inner">Absolutely. We integrate with your current stack — CRMs, email, WhatsApp, websites, spreadsheets, and more. We enhance what you have, not replace it.</p></div>
+          <button class="faq-btn" onclick="faq(this)" aria-expanded="false"><span class="faq-q">How is this different from other AI courses?</span><span class="faq-ico">+</span></button>
+          <div class="faq-body"><p class="faq-body-inner">We don't teach theory — we build real systems that real businesses pay for. Nirmal runs an actual AI automation company (Catapult AI) and teaches the exact same tools and workflows he uses with clients. You learn from a practitioner, not a lecturer.</p></div>
         </div>
       </div>
     </div>
@@ -620,14 +624,14 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
 <section id="cta">
   <div class="container">
     <div class="cta-inner reveal">
-      <h2>Ready to automate<br>your business with AI?</h2>
-      <p class="cta-desc">Book a free 30-minute consultation. We'll analyze your business, identify automation opportunities, and show you exactly how AI can save you time and money.</p>
+      <h2>Ready to start your<br>AI automation journey?</h2>
+      <p class="cta-desc">Join the free community on WhatsApp. Get access to tutorials, live sessions, project ideas, and connect with 2,000+ learners. No payment, no spam — just learning.</p>
       <div class="cta-actions">
-        <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%27d%20like%20to%20book%20a%20free%20AI%20consultation%20for%20my%20business" class="btn btn-white" target="_blank">
+        <a href="https://wa.me/919710508886?text=Hi%20Nirmal%2C%20I%20want%20to%20join%20the%20Learn%20AI%20Today%20community!" class="btn btn-white" target="_blank">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Chat on WhatsApp
+          Join Free on WhatsApp
         </a>
-        <a href="#services" class="btn btn-ghost-white">Explore Services</a>
+        <a href="https://www.facebook.com/groups/learnaitoday" class="btn btn-ghost-white" target="_blank">Join Facebook Group</a>
       </div>
     </div>
   </div>
@@ -644,31 +648,43 @@ footer{background:var(--primary);color:rgba(255,255,255,0.5);padding:48px 0 36px
           <div class="footer-brand-mark">LAT</div>
           Learn AI Today
         </div>
-        <p class="footer-tagline">AI automation, custom agents, and training for businesses that want to work smarter.</p>
+        <p class="footer-tagline">Learn AI automation, build real skills, and start earning — in Tamil &amp; English.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/groups/learnaitoday" target="_blank" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/learnaitoday" target="_blank" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@learnaitoday" target="_blank" class="social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path fill="#0F172A" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
       </div>
       <div class="footer-nav">
         <div class="footer-nav-col">
-          <h4>Company</h4>
+          <h4>Learn</h4>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#results">Results</a></li>
+            <li><a href="#learn">What You Learn</a></li>
+            <li><a href="#path">Learning Path</a></li>
+            <li><a href="#who">Who It's For</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
-          <h4>Resources</h4>
+          <h4>Connect</h4>
           <ul>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#usecases">Use Cases</a></li>
-            <li><a href="https://wa.me/919710508886" target="_blank">Contact</a></li>
+            <li><a href="#about">About Nirmal</a></li>
+            <li><a href="https://www.facebook.com/groups/learnaitoday" target="_blank">Facebook Group</a></li>
+            <li><a href="https://wa.me/919710508886" target="_blank">WhatsApp</a></li>
+            <li><a href="https://catapultai.in" target="_blank">Catapult AI</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">&copy; 2026 Learn AI Today. All rights reserved.</p>
-      <p class="footer-copy">Built with AI, for businesses that run on AI.</p>
+      <p class="footer-copy">A <a href="https://catapultai.in" target="_blank" style="color:rgba(255,255,255,0.5);text-decoration:underline">Catapult AI</a> initiative.</p>
     </div>
   </div>
 </footer>
@@ -691,43 +707,21 @@ window.toggleNav=toggleNav;
 
 /* ---- SCROLL REVEAL ---- */
 const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
-},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-/* ---- FAQ ACCORDION ---- */
+/* ---- FAQ ---- */
 function faq(btn){
   const item=btn.closest('.faq-item');
   const isOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-btn').setAttribute('aria-expanded','false')});
-  if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+  btn.setAttribute('aria-expanded',!isOpen);
 }
 window.faq=faq;
 
-/* ---- SMOOTH SCROLL ---- */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){e.preventDefault();const y=target.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'})}
-    const ul=document.getElementById('navLinks');
-    if(ul.style.display==='flex')ul.style.cssText='';
-  });
-});
-
-/* ---- NAV ACTIVE STATE ---- */
-const sections=document.querySelectorAll('section[id]');
-const navLinks=document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll',()=>{
-  let current='';
-  sections.forEach(s=>{if(scrollY>=s.offsetTop-120)current=s.getAttribute('id')});
-  navLinks.forEach(a=>{
-    a.style.color=a.getAttribute('href')==='#'+current?'var(--accent)':'';
-    a.style.fontWeight=a.getAttribute('href')==='#'+current?'600':'';
-  });
-},{passive:true});
-
 })();
 </script>
-
 </body>
 </html>
